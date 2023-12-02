@@ -1,0 +1,404 @@
+.text {
+    color: #000;
+    font-family: Pretendard;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.hide {
+    display: none !important; 
+}
+
+body {
+    background-color: #F5F5F5;
+    max-width: 440px;
+    min-width: 360px;
+    margin: 0 auto;
+}
+
+#base {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#banner {
+    display: flex;
+    height: 100vh;
+}
+
+#tab {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 46px;
+    background: #F8F8F8;
+}
+
+#tab-inner {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 20px;
+    margin: auto;
+}
+
+.tab-item {
+    font-size: 14px;
+    line-height: 140%;
+}
+
+.contents-area {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 30px;
+}
+
+.contents {
+    margin-top: 70px;
+}
+
+.contents .subject {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 140%;
+}
+
+#welcome-message-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#welcome-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    line-height: 30px;
+}
+
+#family-contects {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+#family {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 40px auto;
+    line-height: 200%;
+}
+
+#parents-text-area {
+    display: flex;
+    flex-direction: column;
+    margin-right: 12px;
+}
+
+#us-text-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.us {
+    font-weight: bold;
+}
+
+#contect-area {
+    width: 100%;
+}
+
+#contect-button {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3px;
+    background: #F5F5F5;
+}
+
+#button-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    margin: 11px 20px;
+}
+
+#contect-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #F5F5F5;
+    border-radius: 0px 0px 3px 3px;
+    padding: 20px;
+}
+
+.contect-box-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#our-story-area {
+    display: flex;
+    flex-direction: column;
+}
+
+#our-story-area .inner-contents {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+#our-story-area .contents-question {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+#our-story-area .contents-answer {
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+#gallary-area .small-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#gallary-area .img {
+    width: 100%;
+    padding-top: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#date-area {
+    display: flex;
+    flex-direction: column;
+}
+
+#date-area .inner-contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+#calendar-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#calendar-area {
+    width: 100%;
+    height: fit-content;
+}
+
+#calendar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 44px;
+}
+
+#calendar .week {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#calendar .day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17px;
+    height: 17px;
+    padding: 10px;
+    text-align: center;
+}
+
+#calendar .day.highlight {
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+}
+
+#location-area {
+    display: flex;
+    flex-direction: column;
+}
+
+#map-area {
+    margin-bottom: 40px;
+}
+
+#map-area .inner-contents {
+    margin-top: 20px;
+}
+
+#location-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#location {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+#location-name {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+#copy-location {
+    display: flex;
+    padding: 3px 8px 2px 8px;
+    align-items: center;
+    color: #666;
+    font-size: 12px;
+    line-height: 16px;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+#address {
+    display: flex;
+    flex-direction: column;
+}
+
+#address .text {
+    color: #777;
+    font-size: 13px;
+    line-height: 21px;
+    letter-spacing: -0.13px;
+}
+
+#map img {
+    width: 100%;
+    padding-top: 100%;
+    background: lightskyblue;
+}
+
+#app_link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 6px;
+    align-self: stretch;
+}
+
+#app_link .map-button {
+    display: flex;
+    padding: 9px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+#traffic-area .inner-contents {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 24px;
+}
+
+#traffic-area .inner-subject {
+    font-weight: 700;
+    line-height: 24px;
+}
+
+#traffic-area .inner-text {
+    font-size: 15px;
+    line-height: 24px;
+}
+
+#account-area {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+#account {
+    display: flex;
+    flex-direction: column;
+}
+
+#account .dropdown {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 14px 20px;
+    background: #F5F5F5;;
+}
+
+#account .dropdown-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    margin-top: 1px;
+    background: #F5F5F5;;
+}
+
+#account .account-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#account .account-owner {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px; /* 171.429% */
+    letter-spacing: -0.14px;
+    
+}
+
+#account .account-number {
+    margin-left: 8px;
+    margin-right: auto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+    letter-spacing: -0.14px;
+}
+
+#account .copy-button {
+    display: flex;
+    padding: 4px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 2px;
+    background: #FFF;
+    color: #000;
+    font-size: 13px;
+    line-height: 140%;
+    letter-spacing: -0.13px;
+}
