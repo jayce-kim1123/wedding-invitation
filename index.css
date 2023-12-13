@@ -1,3 +1,11 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .text {
     color: #000;
     font-family: Pretendard;
@@ -37,6 +45,7 @@ body {
 
 #banner-img {
     width: 100%;
+    object-fit: cover;
     height: 85%;
     border-radius: 10px;
 }
