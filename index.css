@@ -3,7 +3,7 @@
 *::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 .text {
@@ -179,7 +179,7 @@ body {
 }
 
 #contect-box.show {
-    height: 50px;
+    height: 63px;
     padding: 20px;
 }
 
@@ -337,8 +337,7 @@ body {
 
 #map img {
     width: 100%;
-    padding-top: 100%;
-    background: lightskyblue;
+    height: 100%;
 }
 
 #app_link {
@@ -402,9 +401,21 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 20px;
     margin-top: 1px;
-    background: #F5F5F5;;
+    background: #F5F5F5;
+    padding: 0px 20px 0px 20px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-in, padding 0.3s ease-in;
+}
+
+#groom-account.show {
+    height: 67px;
+    padding: 20px;
+}
+#bride-account.show {
+    height: 108px;
+    padding: 20px;
 }
 
 #account .account-info {

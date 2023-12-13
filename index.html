@@ -13,8 +13,20 @@
         var targetElement = document.getElementById(targetId);
         targetElement.classList.toggle('show');
     }
-</script>
 
+    function openLink(linkUrl) {
+        window.open(linkUrl, "_blank");
+    }
+</script>
+<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+<script charset="UTF-8">
+    new daum.roughmap.Lander({
+        "timestamp" : "1702473795310",
+        "key" : "2h7xq",
+        "mapWidth" : "640",
+        "mapHeight" : "360"
+    }).render();
+</script>
 <body>
     <div id="base">
         <div id="banner-frame">
@@ -229,11 +241,10 @@
                         </div>
                     </div>
                     <div id="map" class="inner-contents">
-                        <img src="" alt="">
                     </div>
                     <div id="app_link" class="inner-contents">
-                        <div class="map-button">네이버 지도</div>
-                        <div class="map-button">카카오 맵</div>
+                        <div class="map-button" onclick="openLink('https://naver.me/G6Dy5yIN')">네이버 지도</div>
+                        <div class="map-button" onclick="openLink('https://kko.to/eSva9XPWrY')">카카오 맵</div>
                     </div>
                 </div>
                 <div id="traffic-area">
@@ -256,11 +267,11 @@
                     마음 전하실 곳
                 </div>
                 <div id="account">
-                    <div class="dropdown">
+                    <div class="dropdown" onclick="toggleDropdown('groom-account')">
                         <div class="account-group">신랑측 계좌번호</div>
                         <i class="arrow-bottom">a</i>
                     </div>
-                    <div class="dropdown-box hide">
+                    <div id="groom-account" class="dropdown-box">
                         <div class="account-info">
                             <span class="account-owner text">정금여</span>
                             <span class="account-number text">농협  3333-1234-567890</span>
@@ -272,11 +283,11 @@
                             <span class="copy-button text">복사</span>
                         </div>
                     </div>
-                    <div class="dropdown" style="margin-top: 6px;">
+                    <div class="dropdown" onclick="toggleDropdown('bride-account')" style="margin-top: 6px;">
                         <div class="account-group">신부측 계좌번호</div>
                         <i class="arrow-bottom">a</i>
                     </div>
-                    <div class="dropdown-box hide">
+                    <div id="bride-account" class="dropdown-box">
                         <div class="account-info">
                             <span class="account-owner text">오덕흠</span>
                             <span class="account-number text">국민  645-21-0025-017</span>
