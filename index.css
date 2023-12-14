@@ -6,6 +6,13 @@
     box-sizing: content-box;
 }
 
+body {
+    user-select: none;
+    -webkit-user-select: none; /* Chrome, Safari, Edge, Opera */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE 10+ */
+}
+
 .text {
     color: #000;
     font-family: Pretendard;
