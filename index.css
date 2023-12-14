@@ -410,7 +410,7 @@ body {
     padding: 0px 20px 0px 20px;
     height: 0;
     overflow: hidden;
-    transition: height 0.5s ease-in, padding 0.3s ease-in;
+    transition: height 0.3s ease-in, padding 0.3s ease-in;
 }
 
 #groom-account.show {
