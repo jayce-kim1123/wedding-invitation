@@ -7,6 +7,11 @@
 }
 
 body {
+    color: #000;
+    font-family: Pretendard;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
     z-index: -10;
     user-select: none;
     -webkit-user-select: none; /* Chrome, Safari, Edge, Opera */
@@ -18,11 +23,12 @@ body {
     display: none;
 }
 
-.text {
-    color: #000;
-    font-family: Pretendard;
-    font-weight: 400;
-    font-size: 16px;
+.tw-700 {
+    font-weight: 700;
+}
+
+.lh-26 {
+    line-height: 26px;
 }
 
 .text-999 {
@@ -146,12 +152,10 @@ body {
 }
 
 .contents .subject {
-    color: #798EAA;
-    font-family: Canela Deck Trial;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 140%;
-    text-align: center;
+    color: #000;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 32px;
     margin-bottom: 30px;
 }
 
@@ -171,7 +175,6 @@ body {
 
 #family-contects {
     display: flex;
-    width: 100%;
     flex-direction: column;
     align-items: center;
 }
@@ -180,14 +183,27 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 40px auto;
+    margin-bottom: 40px;
     line-height: 200%;
 }
 
 #parents-text-area {
     display: flex;
     flex-direction: column;
-    margin-right: 12px;
+    margin-right: 13px;
+}
+
+.dml {
+    color: #111;
+    font-size: 12px;
+    line-height: 32px;
+    letter-spacing: 0.24px;
+}
+
+.parents {
+    color: #111;
+    line-height: 32px;
+    letter-spacing: 0.32px;
 }
 
 #us-text-area {
@@ -196,7 +212,10 @@ body {
 }
 
 .us {
-    font-weight: bold;
+    color: #111;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.32px;
 }
 
 #contect-area {
@@ -262,32 +281,28 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 17px;
     font-weight: 700;
-    line-height: 25px;
 }
 
 #our-story-area .dropdown-box {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 25px;
     padding-top: 0;
     height: 0;
     overflow: hidden;
-    transition: height 0.5s ease-in, padding-top 0.5s ease-in;
+    /* transition: height 0.5s ease-in, padding-top 0.5s ease-in; */
 }
 
 #our-story-area .dropdown-box.show {
     padding-top: 16px;
-    height: 200px;
+    height: fit-content;
+    margin-bottom: 30px;
 }
 
 #our-story-area .contents-answer {
     font-size: 15px;
-    line-height: 24px;
+    line-height: 26px;
 }
 
 #gallary-area {
@@ -351,23 +366,23 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-top: 80px;
 }
 
 #date-area .inner-contents {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 20px;
+    align-items: center;
+    color: var(--111111, #111);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
 }
 
 #calendar-area {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-}
-
-#calendar-area {
     width: 100%;
     height: fit-content;
 }
@@ -377,7 +392,10 @@ body {
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    margin-top: 44px;
+    padding: 20px 0px;
+    border-top: 1px solid rgba(0, 0, 0, 0.10);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    margin-top: 20px;
 }
 
 #calendar .week {
@@ -399,7 +417,7 @@ body {
 }
 
 #calendar .day.highlight {
-    background-color: red;
+    background-color: #D27BBA;
     border-radius: 50%;
     color: white;
 }
@@ -430,9 +448,9 @@ body {
 }
 
 #location-name {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 28px;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 32px;
 }
 
 #copy-location {
@@ -440,8 +458,8 @@ body {
     padding: 3px 8px 2px 8px;
     align-items: center;
     color: #666;
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 13px;
+    line-height: 18px;
     border-radius: 2px;
     border: 1px solid rgba(0, 0, 0, 0.10);
 }
@@ -449,9 +467,6 @@ body {
 #address {
     display: flex;
     flex-direction: column;
-}
-
-#address .text {
     color: #777;
     font-size: 13px;
     line-height: 21px;
@@ -474,13 +489,16 @@ body {
 
 #app_link .map-button {
     display: flex;
-    padding: 9px 30px;
+    padding: 9px 40px;
     justify-content: center;
     align-items: center;
     gap: 10px;
     flex: 1 0 0;
     border-radius: 4px;
     border: 1px solid rgba(0, 0, 0, 0.10);
+    color: #111;
+    font-size: 15px;
+    line-height: 24px;
 }
 
 #traffic-area .inner-contents {
@@ -491,13 +509,13 @@ body {
 }
 
 #traffic-area .inner-subject {
+    color: #111;
     font-weight: 700;
-    line-height: 24px;
 }
 
 #traffic-area .inner-text {
+    color: #333;
     font-size: 15px;
-    line-height: 24px;
 }
 
 #account-area {
@@ -537,6 +555,7 @@ body {
     height: 67px;
     padding: 20px;
 }
+
 #bride-account.show {
     height: 108px;
     padding: 20px;
@@ -551,7 +570,6 @@ body {
 #account .account-owner {
     font-size: 14px;
     font-weight: 600;
-    line-height: 24px; /* 171.429% */
     letter-spacing: -0.14px;
     
 }
@@ -560,9 +578,6 @@ body {
     margin-left: 8px;
     margin-right: auto;
     font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px; /* 171.429% */
     letter-spacing: -0.14px;
 }
 
