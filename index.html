@@ -23,6 +23,25 @@
         targetElement.classList.toggle('show');
     }
 
+    function toggleDropdownOtherHide(targetId, className) {
+        var targetElement = document.getElementById(targetId);
+        var targetElements = document.querySelectorAll('.' + className);
+    
+        targetElements.forEach(function(element) {
+            element.classList.remove('show'); // 또는 'inline', 'flex' 등
+        });
+        targetElement.classList.add('show');
+    }
+
+    function setBGColorOnlyThis(targetId, className, color) {
+        var targetElement = document.getElementById(targetId);
+        var targetElements = document.querySelectorAll('.' + className);
+        targetElements.forEach(function(element) {
+            element.style.background = null;
+        });
+        targetElement.style.backgroundColor = color;
+    }
+
     function openLink(linkUrl) {
         window.open(linkUrl, "_blank");
     }
@@ -55,6 +74,47 @@
             targetElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest', offsetTop: 1000 });
         }
     }
+
+    function setImagesquare(className) {
+        document.querySelectorAll('.' + className).forEach(function(element) {
+            var width = element.clientWidth;
+            element.style.height = width + 'px';
+        });
+    }
+
+    window.addEventListener('resize', function() {
+        setImagesquare('gallary-img');
+    });
+
+    window.addEventListener('load', function() {
+        setImagesquare('gallary-img');
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var modal = document.querySelector('.gallary-modal');
+        var modalImage = document.querySelector('.gallary-modal-image');
+        var modalTrigger = document.querySelectorAll('.modal-trigger');
+        
+            // 각 이미지에 대한 클릭 이벤트 리스너 추가
+            modalTrigger.forEach(function(trigger) {
+                trigger.addEventListener('click', function() {
+                    modalImage.src = trigger.src;
+                    modal.classList.remove('hide');
+                    modal.classList.add('show');
+                    event.stopPropagation();
+                });
+            });
+            
+            // 모달 외부 영역 클릭 시 모달 닫기
+            window.addEventListener('click', function(event) {
+                if (event.target !== modal) {
+                modal.classList.remove('show');
+                modal.classList.add('hide');
+                event.stopPropagation();
+            }
+        });
+    });
+
 </script>
 <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.5.0/kakao.min.js" integrity="sha384-kYPsUbBPlktXsY6/oNHSUDZoTX6+YI51f63jCPEIPFP09ttByAdxd2mEjKuhdqn4" crossorigin="anonymous"></script>
 <script>
@@ -85,10 +145,12 @@
                     <span class="text">각자의 반을 나누기로 약속했습니다.</span>
                     <span class="text">11년이 되는 그 날</span>
                     <span class="text">이제는 서로의 전부가 되려 합니다.</span>
+                    <br>
                     <span class="text">어느 겨울날의 땅처럼,</span>
                     <span class="text">지금껏 함께 단단해진 저희의 끝과</span>
                     <span class="text">앞으로 더욱 단단해질 저희의 시작을</span>
                     <span class="text">많은 분들 앞에서 보여드리려 합니다.</span>
+                    <br>
                     <span class="text">귀한 걸음 하시어 지켜봐 주시고</span>
                     <span class="text">축하해 주시면 감사하겠습니다.</span>
                 </div>
@@ -103,101 +165,131 @@
                             <span class="us text">오수빈</span>
                         </span>
                     </div>
-                    <div id="contect-area">
-                        <div id="contect-button" onclick="toggleDropdown('contect-box')">
-                            <div id="button-inner">
-                                <div id="button-text text">
-                                    직접 연락하기
-                                </div>
-                                <i id="arrow">a</i>
-                            </div>
+                </div>
+            </div>
+            <div id="contect-area">
+                <div id="contect-button" onclick="toggleDropdown('contect-box')">
+                    <div id="button-inner">
+                        <div id="button-text text">
+                            직접 연락하기
                         </div>
-                        <div id="contect-box">
-                            <div class="contect-box-item" style="margin-bottom: 15px;">
-                                <span class="text" style="margin-right: 16px;">신랑</span>
-                                <span class="text" style="margin-right: auto;">김지성</span>
-                                <i id="phone" style="margin-left: 24px;">p</i>
-                                <i id="message" style="margin-left: 24px;">m</i>
-                            </div>
-                            <div class="contect-box-item">
-                                <span class="text" style="margin-right: 16px;">신부</span>
-                                <span class="text" style="margin-right: auto;">오수빈</span>
-                                <i id="phone" style="margin-left: 24px;">p</i>
-                                <i id="message" style="margin-left: 24px;">m</i>
-                            </div>
-                        </div>
+                        <i id="arrow">a</i>
+                    </div>
+                </div>
+                <div id="contect-box">
+                    <div class="contect-box-item" style="margin-bottom: 15px;">
+                        <span class="text" style="margin-right: 16px;">신랑</span>
+                        <span class="text" style="margin-right: auto;">김지성</span>
+                        <i id="phone" style="margin-left: 24px;">p</i>
+                        <i id="message" style="margin-left: 24px;">m</i>
+                    </div>
+                    <div class="contect-box-item">
+                        <span class="text" style="margin-right: 16px;">신부</span>
+                        <span class="text" style="margin-right: auto;">오수빈</span>
+                        <i id="phone" style="margin-left: 24px;">p</i>
+                        <i id="message" style="margin-left: 24px;">m</i>
                     </div>
                 </div>
             </div>
             <div id="scroll-point-story"></div>
             <div id="our-story-area" class="contents">
                 <div class="subject">
-                    우리의 이야기
+                    Our story
                 </div>
-                <div class="inner-contents">
-                    <span class="contents-question text">
-                        Q. 둘은 어떻게 만났나요?
-                    </span>
-                    <span class="contents-answer text">
-                        2012년 겨울, 23살의 신부와 20살의 신랑이 함께 알바했던 카페에서 처음 만났던게 기억이 나네요. 누나동생 사이에서 적극적인 신랑의 대시로 사귀게 되었어요.
-                    </span>
+                <div id="osic-1" class="inner-contents osic" onclick="toggleDropdownOtherHide('osddb-1', 'dropdown-box'), setBGColorOnlyThis('osic-1', 'osic', '#F5F5F5')">
+                    <div class="contents-question text">
+                        <span class="text">둘은 어떻게 만났나요?</span>
+                        <i>a</i>
+                    </div>
+                    <div id="osddb-1" class="dropdown-box show">
+                        <span class="contents-answer text">
+                            2012년 겨울, 23살의 신부와 20살의 신랑이 함께 알바했던 카페에서 처음 만났던게 기억이 나네요. 누나동생 사이에서 적극적인 신랑의 대시로 사귀게 되었어요.
+                            2012년 겨울, 23살의 신부와 20살의 신랑이 함께 알바했던 카페에서 처음 만났던게 기억이 나네요. 누나동생 사이에서 적극적인 신랑의 대시로 사귀게 되었어요.
+                            2012년 겨울, 23살의 신부와 20살의 신랑이 함께 알바했던 카페에서 처음 만났던게 기억이 나네요. 누나동생 사이에서 적극적인 신랑의 대시로 사귀게 되었어요.
+                        </span>
+                    </div>
                 </div>
-                <div class="inner-contents">
-                    <span class="contents-question text">
-                        Q. Q. 신랑🐶 김지성은 어떤 사람인가요?
-                    </span>
-                    <span class="contents-answer text">
-                        2012년 겨울, 23살의 신부와 20살의 신랑이 함께 알바했던 카페에서 처음 만났던게 기억이 나네요. 누나동생 사이에서 적극적인 신랑의 대시로 사귀게 되었어요.
-                    </span>
+                <div id="osic-2" class="inner-contents osic" onclick="toggleDropdownOtherHide('osddb-2', 'dropdown-box'), setBGColorOnlyThis('osic-2', 'osic', '#F5F5F5')">
+                    <div class="contents-question text">
+                        <span class="text">신랑🐶 김지성은 어떤 사람인가요?</span>
+                        <i>a</i>
+                    </div>
+                    <div id="osddb-2" class="dropdown-box">
+                        <span class="contents-answer text">
+                            2012년 겨울, 23살의 신부와 20살의 신랑이 함께 알바했던 카페에서 처음 만났던게 기억이 나네요. 누나동생 사이에서 적극적인 신랑의 대시로 사귀게 되었어요.
+                            2012년 겨울, 23살의 신부와 20살의 신랑이 함께 알바했던 카페에서 처음 만났던게 기억이 나네요. 누나동생 사이에서 적극적인 신랑의 대시로 사귀게 되었어요.
+                            2012년 겨울, 23살의 신부와 20살의 신랑이 함께 알바했던 카페에서 처음 만났던게 기억이 나네요. 누나동생 사이에서 적극적인 신랑의 대시로 사귀게 되었어요.
+                            2012년 겨울, 23살의 신부와 20살의 신랑이 함께 알바했던 카페에서 처음 만났던게 기억이 나네요. 누나동생 사이에서 적극적인 신랑의 대시로 사귀게 되었어요.
+                            2012년 겨울, 23살의 신부와 20살의 신랑이 함께 알바했던 카페에서 처음 만났던게 기억이 나네요. 누나동생 사이에서 적극적인 신랑의 대시로 사귀게 되었어요.
+                        </span>
+                    </div>
                 </div>
-                <div class="inner-contents">
-                    <span class="contents-question text">
-                        Q. 신부🐻‍❄️ 오수빈은 어떤 사람인가요?
-                    </span>
-                    <span class="contents-answer text">
-                        2012년 겨울, 23살의 신부와 20살의 신랑이 함께 알바했던 카페에서 처음 만났던게 기억이 나네요. 누나동생 사이에서 적극적인 신랑의 대시로 사귀게 되었어요.
-                    </span>
+                <div id="osic-3" class="inner-contents osic" onclick="toggleDropdownOtherHide('osddb-3', 'dropdown-box'), setBGColorOnlyThis('osic-3', 'osic', '#F5F5F5')">
+                    <div class="contents-question text">
+                        <span class="text">신부🐻‍❄️ 오수빈은 어떤 사람인가요?</span>
+                        <i>a</i>
+                    </div>
+                    <div id="osddb-3" class="dropdown-box">
+                        <span class="contents-answer text">
+                            2012년 겨울, 23살의 신부와 20살의 신랑이 함께 알바했던 카페에서 처음 만났던게 기억이 나네요. 누나동생 사이에서 적극적인 신랑의 대시로 사귀게 되었어요.
+                            2012년 겨울, 23살의 신부와 20살의 신랑이 함께 알바했던 카페에서 처음 만났던게 기억이 나네요. 누나동생 사이에서 적극적인 신랑의 대시로 사귀게 되었어요.
+                            2012년 겨울, 23살의 신부와 20살의 신랑이 함께 알바했던 카페에서 처음 만났던게 기억이 나네요. 누나동생 사이에서 적극적인 신랑의 대시로 사귀게 되었어요.
+                        </span>
+                    </div>
                 </div>
-                <div class="inner-contents">
-                    <span class="contents-question text">
-                        Q. 신혼여행은 어디로 가나요?
-                    </span>
-                    <span class="contents-answer text">
-                        2012년 겨울, 23살의 신부와 20살의 신랑이 함께 알바했던 카페에서 처음 만났던게 기억이 나네요. 누나동생 사이에서 적극적인 신랑의 대시로 사귀게 되었어요.
-                    </span>
+                <div id="osic-4" class="inner-contents osic" onclick="toggleDropdownOtherHide('osddb-4', 'dropdown-box'), setBGColorOnlyThis('osic-4', 'osic', '#F5F5F5')">
+                    <div class="contents-question text">
+                        <span class="text">신혼여행은 어디로 가나요?</span>
+                        <i>a</i>
+                    </div>
+                    <div id="osddb-4" class="dropdown-box">
+                        <span class="contents-answer text">
+                            2012년 겨울, 23살의 신부와 20살의 신랑이 함께 알바했던 카페에서 처음 만났던게 기억이 나네요. 누나동생 사이에서 적극적인 신랑의 대시로 사귀게 되었어요.
+                            2012년 겨울, 23살의 신부와 20살의 신랑이 함께 알바했던 카페에서 처음 만났던게 기억이 나네요. 누나동생 사이에서 적극적인 신랑의 대시로 사귀게 되었어요.
+                            2012년 겨울, 23살의 신부와 20살의 신랑이 함께 알바했던 카페에서 처음 만났던게 기억이 나네요. 누나동생 사이에서 적극적인 신랑의 대시로 사귀게 되었어요.
+                        </span>
+                    </div>
                 </div>
-                <div class="inner-contents">
-                    <span class="contents-question text">
-                        Q. 축하해주시는 분들께 전하고 싶은 한마디
-                    </span>
-                    <span class="contents-answer text">
-                        2012년 겨울, 23살의 신부와 20살의 신랑이 함께 알바했던 카페에서 처음 만났던게 기억이 나네요. 누나동생 사이에서 적극적인 신랑의 대시로 사귀게 되었어요.
-                    </span>
+                <div id="osic-5" class="inner-contents osic" onclick="toggleDropdownOtherHide('osddb-5', 'dropdown-box'), setBGColorOnlyThis('osic-5', 'osic', '#F5F5F5')">
+                    <div class="contents-question text">
+                        <span class="text">축하해주시는 분들께 전하고 싶은 한마디</span>
+                        <i>a</i>
+                    </div>
+                    <div id="osddb-5" class="dropdown-box">
+                        <span class="contents-answer text">
+                            2012년 겨울, 23살의 신부와 20살의 신랑이 함께 알바했던 카페에서 처음 만났던게 기억이 나네요. 누나동생 사이에서 적극적인 신랑의 대시로 사귀게 되었어요.
+                            2012년 겨울, 23살의 신부와 20살의 신랑이 함께 알바했던 카페에서 처음 만났던게 기억이 나네요. 누나동생 사이에서 적극적인 신랑의 대시로 사귀게 되었어요.
+                            2012년 겨울, 23살의 신부와 20살의 신랑이 함께 알바했던 카페에서 처음 만났던게 기억이 나네요. 누나동생 사이에서 적극적인 신랑의 대시로 사귀게 되었어요.
+                        </span>
+                    </div>
                 </div>
             </div>
             <div id="scroll-point-gallary"></div>
             <div id="gallary-area" class="contents">
                 <div class="subject">
-                    갤러리
+                    Gallery
                 </div>
                 <div class="gallary">
-                    <div class="large-image">
-                        <div class="img" style="background: lightseagreen;"></div>
-                    </div>
-                    <div class="small-images">
-                        <div class="img" style="background: lightcoral;"></div>
-                        <div class="img" style="background: lightblue;"></div>
-                        <div class="img" style="background: lightsalmon;"></div>
-                        <div class="img" style="background: lightgoldenrodyellow;"></div>
-                        <div class="img" style="background: lightgray;"></div>
-                        <div class="img" style="background: lightgreen;"></div>
+                    <div class="images">
+                        <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/banner.svg" class="gallary-img img modal-trigger" alt="gallary-img-1" ></img>
+                        <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/banner.svg" class="gallary-img img modal-trigger" alt="gallary-img-2" ></img>
+                        <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/banner.svg" class="gallary-img img modal-trigger" alt="gallary-img-3" ></img>
+                        <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/banner.svg" class="gallary-img img modal-trigger" alt="gallary-img-4" ></img>
+                        <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/banner.svg" class="gallary-img img modal-trigger" alt="gallary-img-5" ></img>
+                        <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/banner.svg" class="gallary-img img modal-trigger" alt="gallary-img-6" ></img>
+                        <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/banner.svg" class="gallary-img img modal-trigger" alt="gallary-img-7" ></img>
+                        <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/banner.svg" class="gallary-img img modal-trigger" alt="gallary-img-8" ></img>
+                        <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/banner.svg" class="gallary-img img modal-trigger" alt="gallary-img-9" ></img>
+                        <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/banner.svg" class="gallary-img img modal-trigger" alt="gallary-img-10" ></img>
+                        <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/banner.svg" class="gallary-img img modal-trigger" alt="gallary-img-11" ></img>
+                        <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/banner.svg" class="gallary-img img modal-trigger" alt="gallary-img-12" ></img>
                     </div>
                 </div>
             </div>
             <div id="scroll-point-date"></div>
             <div id="date-area" class="contents">
                 <div class="subject">
-                    일시
+                    Date
                 </div>
                 <div class="inner-contents">
                     <span class="text">2024년 1월 27일 토요일</span>
@@ -264,7 +356,7 @@
             </div>
             <div id="location-area" class="contents">
                 <div class="subject">
-                    오시는 길
+                    Location
                 </div>
                 <div id="map-area">
                     <div id="location-text" class="inner-contents">
@@ -287,7 +379,10 @@
                 <div id="traffic-area">
                     <div class="inner-contents">
                         <div class="inner-subject text">지하철</div>
-                        <div class="inner-text text">[경의중앙선, 공항철도, 5호선, 6호선] 공덕역 10번 출구 방향으로 나와 유턴 후, 전방 50미터 우측 ‘효성 해링턴스퀘어 B동'</div>
+                        <div class="inner-text text">
+                            <p>[경의중앙선, 공항철도, 5호선, 6호선]</p>
+                            <p>공덕역 10번 출구 방향으로 나와 유턴 후, 전방 50미터 우측 '효성 해링턴스퀘어 B동'</p>
+                        </div>
                     </div>
                     <div class="inner-contents">
                         <div class="inner-subject text">버스</div>
@@ -295,7 +390,10 @@
                     </div>
                     <div class="inner-contents">
                         <div class="inner-subject text">주차 안내</div>
-                        <div class="inner-text text">내비게이션 ‘공덕역 10번 출구' 검색 시 주차장 입구, 도착 후 주차 안내 받으세요.</div>
+                        <div class="inner-text text">
+                            <p>내비게이션 ‘공덕역 10번 출구' 검색 시 주차장 입구,</p>
+                            <p>도착 후 주차 안내 받으세요.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -346,6 +444,11 @@
             <a id="kakaotalk-sharing-btn" href="javascript:;">
                 <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png" alt="카카오톡 공유 보내기 버튼" />
             </a>
+        </div>
+    </div>
+    <div class="gallary-modal hide">
+        <div class="modal-content">
+            <img src="" alt="Image" class="gallary-modal-image">
         </div>
     </div>
 </body>
