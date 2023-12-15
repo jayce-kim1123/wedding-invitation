@@ -51,6 +51,11 @@ body {
     margin: 0 auto;
 }
 
+.icon {
+    width: 16px;
+    height: 16px;
+}
+
 #base {
     background: white;
     display: flex;

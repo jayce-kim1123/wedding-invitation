@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:url" content="https://subin-jiseong.com/">
-    <meta property="og:title" content="이것은 청첩장">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/banner.svg">
-    <meta property="og:description" content="만약 와주신다면 압도적 감사">
-    <title>[작업 중] 이걸 진짜 만드네 ㅋㅋ</title>
-    <link rel="stylesheet" href="./pretended.css">
-    <link rel="stylesheet" href="./index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:url" content="https://subin-jiseong.com/">
+  <meta property="og:title" content="이것은 청첩장">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/banner.svg">
+  <meta property="og:description" content="만약 와주신다면 압도적 감사">
+  <title>[작업 중] 이걸 진짜 만드네 ㅋㅋ</title>
+  <link rel="stylesheet" href="./pretended.css">
+  <link rel="stylesheet" href="./index.css">
 </head>
 <script>
     document.documentElement.webkitRequestFullScreen();
@@ -33,6 +33,35 @@
         });
         targetElement.classList.add('show');
     }
+
+    function toggleArrowIcon(targetId) {
+      var targetElement = document.getElementById(targetId);
+      var currentArrow = targetElement.getAttribute('src')
+      if (currentArrow === "/icons/arrow-down.svg") {
+        targetElement.src = "/icons/arrow-up.svg"
+      } else if (currentArrow === "/icons/arrow-up.svg") {
+        targetElement.src = "/icons/arrow-down.svg"
+      }
+    }
+
+    function connectArrowAndDropdownBox(arrowId, dropdownId) {
+      var dropdownElement = document.getElementById(dropdownId)
+      var arrowElement = document.getElementById(arrowId)
+
+      if (dropdownElement.classList.contains('show')) {
+        arrowElement.src = "/icons/arrow-up.svg"
+      } else {
+        arrowElement.src = "/icons/arrow-down.svg"
+      }
+    }
+
+    window.addEventListener('click', function() {
+      connectArrowAndDropdownBox('osai-1', 'osddb-1');
+      connectArrowAndDropdownBox('osai-2', 'osddb-2');
+      connectArrowAndDropdownBox('osai-3', 'osddb-3');
+      connectArrowAndDropdownBox('osai-4', 'osddb-4');
+      connectArrowAndDropdownBox('osai-5', 'osddb-5');
+    });
 
     function setBGColorOnlyThis(targetId, className, color) {
         var targetElement = document.getElementById(targetId);
@@ -125,10 +154,6 @@
     <div id="base">
         <div id="banner-frame">
             <img id="banner-img" src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/banner.svg">
-            <div id="banner-text-frame">
-                <span class="banner-text text text-111">2024년 1월 27일 토요일 오후 12시 30분</span>
-                <span class="banner-text text text-111">아펠가모 공덕점 7층 라로브 홀</span>
-            </div>
         </div>
         <div id="fixed-start"></div>
         <div id="tab">
@@ -169,26 +194,26 @@
                 </div>
             </div>
             <div id="contect-area">
-                <div id="contect-button" onclick="toggleDropdown('contect-box')">
+                <div id="contect-button" onclick="toggleDropdown('contect-box'), toggleArrowIcon('contect-button-arrow')">
                     <div id="button-inner">
                         <div id="button-text text">
                             직접 연락하기
                         </div>
-                        <i id="arrow">a</i>
+                        <img id="contect-button-arrow" class="icon" src="/icons/arrow-down.svg">
                     </div>
                 </div>
                 <div id="contect-box">
                     <div class="contect-box-item" style="margin-bottom: 15px;">
                         <span class="text" style="margin-right: 16px;">신랑</span>
                         <span class="text" style="margin-right: auto;">김지성</span>
-                        <i id="phone" style="margin-left: 24px;">p</i>
-                        <i id="message" style="margin-left: 24px;">m</i>
+                        <div id="phone" style="margin-left: 24px;"><img class="icon" src="/icons/phone.svg" alt=""></div>
+                        <div id="message" style="margin-left: 24px;"><img class="icon" src="/icons/message.svg" alt=""></div>
                     </div>
                     <div class="contect-box-item">
                         <span class="text" style="margin-right: 16px;">신부</span>
                         <span class="text" style="margin-right: auto;">오수빈</span>
-                        <i id="phone" style="margin-left: 24px;">p</i>
-                        <i id="message" style="margin-left: 24px;">m</i>
+                        <div id="phone" style="margin-left: 24px;"><img class="icon" src="/icons/phone.svg" alt=""></div>
+                        <div id="message" style="margin-left: 24px;"><img class="icon" src="/icons/message.svg" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -200,7 +225,7 @@
                 <div id="osic-1" class="inner-contents osic" style="background-color: #F5F5F5;" onclick="toggleDropdownOtherHide('osddb-1', 'dropdown-box'), setBGColorOnlyThis('osic-1', 'osic', '#F5F5F5')">
                     <div class="contents-question text">
                         <span class="text">둘은 어떻게 만났나요?</span>
-                        <i>a</i>
+                        <img id="osai-1" class="icon" src="/icons/arrow-down.svg" alt="">
                     </div>
                     <div id="osddb-1" class="dropdown-box show">
                         <span class="contents-answer text">
@@ -213,7 +238,7 @@
                 <div id="osic-2" class="inner-contents osic" onclick="toggleDropdownOtherHide('osddb-2', 'dropdown-box'), setBGColorOnlyThis('osic-2', 'osic', '#F5F5F5')">
                     <div class="contents-question text">
                         <span class="text">신랑🐶 김지성은 어떤 사람인가요?</span>
-                        <i>a</i>
+                        <img id="osai-2" class="icon" src="/icons/arrow-down.svg" alt="">
                     </div>
                     <div id="osddb-2" class="dropdown-box">
                         <span class="contents-answer text">
@@ -228,7 +253,7 @@
                 <div id="osic-3" class="inner-contents osic" onclick="toggleDropdownOtherHide('osddb-3', 'dropdown-box'), setBGColorOnlyThis('osic-3', 'osic', '#F5F5F5')">
                     <div class="contents-question text">
                         <span class="text">신부🐻‍❄️ 오수빈은 어떤 사람인가요?</span>
-                        <i>a</i>
+                        <img id="osai-3" class="icon" src="/icons/arrow-down.svg" alt="">
                     </div>
                     <div id="osddb-3" class="dropdown-box">
                         <span class="contents-answer text">
@@ -241,7 +266,7 @@
                 <div id="osic-4" class="inner-contents osic" onclick="toggleDropdownOtherHide('osddb-4', 'dropdown-box'), setBGColorOnlyThis('osic-4', 'osic', '#F5F5F5')">
                     <div class="contents-question text">
                         <span class="text">신혼여행은 어디로 가나요?</span>
-                        <i>a</i>
+                        <img id="osai-4" class="icon" src="/icons/arrow-down.svg" alt="">
                     </div>
                     <div id="osddb-4" class="dropdown-box">
                         <span class="contents-answer text">
@@ -254,7 +279,7 @@
                 <div id="osic-5" class="inner-contents osic" onclick="toggleDropdownOtherHide('osddb-5', 'dropdown-box'), setBGColorOnlyThis('osic-5', 'osic', '#F5F5F5')">
                     <div class="contents-question text">
                         <span class="text">축하해주시는 분들께 전하고 싶은 한마디</span>
-                        <i>a</i>
+                        <img id="osai-5" class="icon" src="/icons/arrow-down.svg" alt="">
                     </div>
                     <div id="osddb-5" class="dropdown-box">
                         <span class="contents-answer text">
@@ -408,9 +433,9 @@
                     마음 전하실 곳
                 </div>
                 <div id="account">
-                    <div class="dropdown" onclick="toggleDropdown('groom-account')">
+                    <div class="dropdown" onclick="toggleDropdown('groom-account'), toggleArrowIcon('groom-account-arrow')">
                         <div class="account-group">신랑측 계좌번호</div>
-                        <i class="arrow-bottom">a</i>
+                        <img id="groom-account-arrow" class="icon" src="/icons/arrow-down.svg">
                     </div>
                     <div id="groom-account" class="dropdown-box">
                         <div class="account-info">
@@ -424,9 +449,9 @@
                             <span class="copy-button button text" onclick="copyToClipboard('accountNumber2')">복사</span>
                         </div>
                     </div>
-                    <div class="dropdown" onclick="toggleDropdown('bride-account')" style="margin-top: 6px;">
+                    <div class="dropdown" onclick="toggleDropdown('bride-account'), toggleArrowIcon('bride-account-arrow')" style="margin-top: 6px;">
                         <div class="account-group">신부측 계좌번호</div>
-                        <i class="arrow-bottom">a</i>
+                        <img id="bride-account-arrow" class="icon" src="/icons/arrow-down.svg">
                     </div>
                     <div id="bride-account" class="dropdown-box">
                         <div class="account-info">
