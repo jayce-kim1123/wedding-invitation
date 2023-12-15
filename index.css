@@ -51,6 +51,11 @@ body {
     margin: 0 auto;
 }
 
+.icon {
+    width: 16px;
+    height: 16px;
+}
+
 #base {
     background: white;
     display: flex;
@@ -290,7 +295,7 @@ body {
 #gallary-area .images {
     display: grid;
     grid-template-columns: repeat(3, 3fr);
-    gap: 1px
+    margin: 0.5px;
 }
 
 #gallary-area .img {
