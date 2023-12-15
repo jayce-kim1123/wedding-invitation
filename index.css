@@ -7,6 +7,7 @@
 }
 
 body {
+    z-index: -10;
     user-select: none;
     -webkit-user-select: none; /* Chrome, Safari, Edge, Opera */
     -moz-user-select: none; /* Firefox */
@@ -48,6 +49,12 @@ body {
 
 #base {
     background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contents-area {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -125,9 +132,13 @@ body {
 }
 
 .contents .subject {
-    font-size: 24px;
-    font-weight: 800;
+    color: #798EAA;
+    font-family: Canela Deck Trial;
+    font-size: 18px;
+    font-weight: 300;
     line-height: 140%;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 #welcome-message-area {
@@ -223,24 +234,52 @@ body {
 #our-story-area {
     display: flex;
     flex-direction: column;
+    width: 120%;
+    max-width: 440px;
 }
 
 #our-story-area .inner-contents {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    padding: 18px 30px;
 }
 
 #our-story-area .contents-question {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     font-size: 17px;
     font-weight: 700;
     line-height: 25px;
 }
 
+#our-story-area .dropdown-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 25px;
+    padding-top: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-in, padding-top 0.5s ease-in;
+}
+
+#our-story-area .dropdown-box.show {
+    padding-top: 16px;
+    height: 200px;
+}
+
 #our-story-area .contents-answer {
-    margin-top: 8px;
     font-size: 15px;
     line-height: 24px;
+}
+
+#gallary-area {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 #gallary-area .small-images {
@@ -258,6 +297,7 @@ body {
 #date-area {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 #date-area .inner-contents {
@@ -412,6 +452,7 @@ body {
     flex-direction: column;
     gap: 30px;
     margin-bottom: 30px;
+    width: 100%;
 }
 
 #account {
