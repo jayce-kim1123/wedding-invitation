@@ -206,14 +206,30 @@
                     <div class="contect-box-item" style="margin-bottom: 15px;">
                         <span class="text" style="margin-right: 16px;">신랑</span>
                         <span class="text" style="margin-right: auto;">김지성</span>
-                        <div id="phone" style="margin-left: 24px;"><img class="icon" src="/icons/phone.svg" alt=""></div>
-                        <div id="message" style="margin-left: 24px;"><img class="icon" src="/icons/message.svg" alt=""></div>
+                        <div id="phone" style="margin-left: 24px;">
+                          <a href="tel:01025545466">
+                            <img class="icon" src="/icons/phone.svg" alt="">
+                          </a>
+                        </div>
+                        <div id="message" style="margin-left: 24px;">
+                          <a href="sms:01025545466">
+                            <img class="icon" src="/icons/message.svg" alt="">
+                          </a>
+                        </div>
                     </div>
                     <div class="contect-box-item">
                         <span class="text" style="margin-right: 16px;">신부</span>
                         <span class="text" style="margin-right: auto;">오수빈</span>
-                        <div id="phone" style="margin-left: 24px;"><img class="icon" src="/icons/phone.svg" alt=""></div>
-                        <div id="message" style="margin-left: 24px;"><img class="icon" src="/icons/message.svg" alt=""></div>
+                        <div id="phone" style="margin-left: 24px;">
+                          <a href="tel:01048145570">
+                            <img class="icon" src="/icons/phone.svg" alt="">
+                          </a>
+                        </div>
+                        <div id="message" style="margin-left: 24px;">
+                          <a href="sms:01048145570">
+                            <img class="icon" src="/icons/message.svg" alt="">
+                          </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -409,6 +425,7 @@
                         </div>
                     </div>
                     <div id="map" class="inner-contents">
+                      <img src="/images/map.png">
                     </div>
                     <div id="app_link" class="inner-contents">
                         <div class="map-button button" onclick="openLink('https://naver.me/G6Dy5yIN')">네이버 지도</div>
@@ -480,12 +497,21 @@
                     </div>
                 </div>
             </div>
-            <a id="kakaotalk-sharing-btn" href="javascript:;">
-                <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png" alt="카카오톡 공유 보내기 버튼" />
-            </a>
+            <div id ="kakaotalk-sharing-btn" class="button sharing-btn text"  href="javascript:;">
+              카카오톡 공유하기
+            </div>
+            <div id ="link-sharing-button" class="button sharing-btn text" style="margin-top: 6px; margin-bottom: 60px;" onclick="copyToClipboard('invitaiton-link')">
+              링크주소 복사하기
+            </div>
+            <div id="invitaiton-link" hidden>https://subin-jiseong.com</div>
         </div>
     </div>
 </body>
+<footer>
+  <div id="footer-area">
+    <p id="copyright" class="text">&copy; 2023-2099 subin & jiseong. All rights reserved.</p>
+  </div>
+</footer>
 <script>
     Kakao.Share.createCustomButton({
         container: '#kakaotalk-sharing-btn',
