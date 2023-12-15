@@ -6,10 +6,6 @@
     box-sizing: content-box;
 }
 
-button, html [type="button"] {
-    -webkit-appearance: none;   
-  }
-
 body {
     z-index: -10;
     user-select: none;
@@ -297,11 +293,10 @@ body {
 }
 
 #gallary-area .images {
-    display: -webkit-grid;
     display: grid;
-    -webkit-grid-template-columns: repeat(3, 3fr);
     grid-template-columns: repeat(3, 3fr);
-    margin: 0.5px;
+    box-sizing: content-box;
+    gap: 1px;
 }
 
 #gallary-area .img {
