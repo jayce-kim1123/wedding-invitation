@@ -497,12 +497,21 @@
                     </div>
                 </div>
             </div>
-            <a id="kakaotalk-sharing-btn" href="javascript:;">
-                <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png" alt="카카오톡 공유 보내기 버튼" />
-            </a>
+            <div id ="kakaotalk-sharing-btn" class="button sharing-btn text"  href="javascript:;">
+              카카오톡 공유하기
+            </div>
+            <div id ="link-sharing-button" class="button sharing-btn text" style="margin-top: 6px; margin-bottom: 60px;" onclick="copyToClipboard('invitaiton-link')">
+              링크주소 복사하기
+            </div>
+            <div id="invitaiton-link" hidden>https://subin-jiseong.com</div>
         </div>
     </div>
 </body>
+<footer>
+  <div id="footer-area">
+    <p id="copyright" class="text">&copy; 2023-2099 subin & jiseong. All rights reserved.</p>
+  </div>
+</footer>
 <script>
     Kakao.Share.createCustomButton({
         container: '#kakaotalk-sharing-btn',

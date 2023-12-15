@@ -579,3 +579,32 @@ body {
     line-height: 140%;
     letter-spacing: -0.13px;
 }
+
+.sharing-btn {
+    display: flex;
+    padding: 15px 54px 14px 54px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 60px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    color: #666;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+#footer-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    background: #333;
+}
+
+#copyright {
+    color: #FFF;
+    font-size: 12px;
+    margin-bottom: 18px;
+}
