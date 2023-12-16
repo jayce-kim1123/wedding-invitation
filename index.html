@@ -156,9 +156,6 @@
       
       modalTrigger.forEach(function(trigger) {
         trigger.addEventListener(clickEventTrigger, function() {
-          if (clickEventTrigger === 'touchstart') {
-            alert('fuckin ios!')
-          };
           modal.classList.remove('hide');
           modal.classList.add('show');
           event.stopPropagation();
@@ -167,9 +164,6 @@
       
       window.addEventListener(clickEventTrigger, function (event) {
         if (event.target !== modal) {
-          if (clickEventTrigger === 'touchstart') {
-            alert('fuckin ios!')
-          };
           modal.classList.remove('show');
           modal.classList.add('hide');
         }
