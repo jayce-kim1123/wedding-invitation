@@ -112,6 +112,10 @@
         });
     }
 
+  window.addEventListener('orientationchange', function() {
+    setImagesquare('gallary-img');
+  });
+
     window.addEventListener('resize', function() {
         setImagesquare('gallary-img');
     });
@@ -131,7 +135,6 @@
       } else {
         var clickEventTrigger = 'click'
       }
-
       modalTrigger.forEach(function(trigger) {
         trigger.addEventListener(clickEventTrigger, function() {
           if (clickEventTrigger === 'touchstart') {
