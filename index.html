@@ -121,28 +121,39 @@
     });
 
     document.addEventListener('DOMContentLoaded', function() {
-        var modal = document.querySelector('.gallary-modal');
-        var modalImage = document.querySelector('.gallary-modal-image');
-        var modalTrigger = document.querySelectorAll('.modal-trigger');
-        
-            // 각 이미지에 대한 클릭 이벤트 리스너 추가
-            modalTrigger.forEach(function(trigger) {
-                trigger.addEventListener('click', function() {
-                    modalImage.src = trigger.src;
-                    modal.classList.remove('hide');
-                    modal.classList.add('show');
-                    event.stopPropagation();
-                });
-            });
-            
-            // 모달 외부 영역 클릭 시 모달 닫기
-            window.addEventListener('click', function(event) {
-                if (event.target !== modal) {
-                modal.classList.remove('show');
-                modal.classList.add('hide');
-                event.stopPropagation();
-            }
+      var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+      var modal = document.querySelector('.gallary-modal');
+      var modalImage = document.querySelector('.gallary-modal-image');
+      var modalTrigger = document.querySelectorAll('.modal-trigger');
+      
+      if (isIOS) {
+        var clickEventTrigger = 'touchstart'
+      } else {
+        var clickEventTrigger = 'click'
+      }
+
+      modalTrigger.forEach(function(trigger) {
+        trigger.addEventListener(clickEventTrigger, function() {
+          if (clickEventTrigger === 'touchstart') {
+            alert('fuckin ios!')
+          };
+          modalImage.src = trigger.src;
+          modal.classList.remove('hide');
+          modal.classList.add('show');
         });
+        event.stopPropagation();
+      });
+      
+      window.addEventListener(clickEventTrigger, function (event) {
+        if (event.target !== modal) {
+          if (clickEventTrigger === 'touchstart') {
+            alert('fuckin ios!')
+          };
+          modal.classList.remove('show');
+          modal.classList.add('hide');
+        }
+      });
+      event.stopPropagation();
     });
 
 </script>
