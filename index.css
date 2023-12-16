@@ -332,6 +332,8 @@ body {
 #gallary-area .img {
     width: 100%;
     overflow: hidden;
+    object-position: center;
+    object-fit: cover;
 }
 
 .gallary-modal-image {
