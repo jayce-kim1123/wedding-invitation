@@ -125,7 +125,7 @@
     });
 
     document.addEventListener('DOMContentLoaded', function() {
-      var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
       var modal = document.querySelector('.gallary-modal');
       var modalImage = document.querySelector('.gallary-modal-image');
       var modalTrigger = document.querySelectorAll('.modal-trigger');
@@ -135,6 +135,7 @@
       } else {
         var clickEventTrigger = 'click'
       }
+      
       modalTrigger.forEach(function(trigger) {
         trigger.addEventListener(clickEventTrigger, function() {
           if (clickEventTrigger === 'touchstart') {
@@ -143,8 +144,8 @@
           modalImage.src = trigger.src;
           modal.classList.remove('hide');
           modal.classList.add('show');
+          event.stopPropagation();
         });
-        event.stopPropagation();
       });
       
       window.addEventListener(clickEventTrigger, function (event) {
@@ -156,7 +157,6 @@
           modal.classList.add('hide');
         }
       });
-      event.stopPropagation();
     });
 
 </script>
