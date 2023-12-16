@@ -7,12 +7,30 @@
   <meta property="og:url" content="https://subin-jiseong.com/">
   <meta property="og:title" content="이것은 청첩장">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_.jpg">
+  <meta property="og:image" content="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/kakao_share-img.jpg">
   <meta property="og:description" content="만약 와주신다면 압도적 감사">
   <title>[작업 중] 이걸 진짜 만드네 ㅋㅋ</title>
   <link rel="stylesheet" href="./pretended.css">
   <link rel="stylesheet" href="./index.css">
 </head>
+<div class="gallary-modal hide">
+  <div class="close-btn" onclick="toggleElement('gallary-modal')"><img class="icon" src="/icons/close.svg" alt=""></div>
+  <swiper-container class="mySwiper" pagination="true" pagination-dynamic-bullets="true">
+    <swiper-slide><img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_1.jpg"></swiper-slide>
+    <swiper-slide><img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_2.jpg"></swiper-slide>
+    <swiper-slide><img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_3.jpg"></swiper-slide>
+    <swiper-slide><img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_4.jpg"></swiper-slide>
+    <swiper-slide><img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_5.jpg"></swiper-slide>
+    <swiper-slide><img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_6.jpg"></swiper-slide>
+    <swiper-slide><img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_7.jpg"></swiper-slide>
+    <swiper-slide><img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_8.jpg"></swiper-slide>
+    <swiper-slide><img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_9.jpg"></swiper-slide>
+    <swiper-slide><img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_10.jpg"></swiper-slide>
+    <swiper-slide><img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_11.jpg"></swiper-slide>
+    <swiper-slide><img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_12.jpg"></swiper-slide>
+  </swiper-container>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 <script>
     document.documentElement.webkitRequestFullScreen();
     document.addEventListener('dragstart', function (e) {
@@ -141,7 +159,6 @@
           if (clickEventTrigger === 'touchstart') {
             alert('fuckin ios!')
           };
-          modalImage.src = trigger.src;
           modal.classList.remove('hide');
           modal.classList.add('show');
           event.stopPropagation();
@@ -158,6 +175,13 @@
         }
       });
     });
+
+    function toggleElement(targetId) {
+      var targetElement = document.getElementById(targetId);
+
+      targetElement.classList.toggle('hide');
+
+    }
 
 </script>
 <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.5.0/kakao.min.js" integrity="sha384-kYPsUbBPlktXsY6/oNHSUDZoTX6+YI51f63jCPEIPFP09ttByAdxd2mEjKuhdqn4" crossorigin="anonymous"></script>
@@ -349,11 +373,6 @@
                         <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_11.jpg" class="gallary-img img modal-trigger"></img>
                         <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_12.jpg" class="gallary-img img modal-trigger"></img>
                       </div>
-                    </div>
-                </div>
-                <div class="gallary-modal hide">
-                    <div class="modal-content">
-                        <img src="" alt="Image" class="gallary-modal-image">
                     </div>
                 </div>
             </div>
