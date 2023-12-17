@@ -117,15 +117,9 @@ body {
     height: 46px;
 }
 
-.tab-size-box {
-    width: 100%;
-    height: 46px;
-}
 
 #tab.fixed {
     max-width: 440px;
-    align-items: center;
-    height: 46px;
     background: white;
 }
 
