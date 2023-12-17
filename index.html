@@ -39,7 +39,6 @@
 <script>
   const mySwiper = new Swiper('.swiper-container', {
     direction: 'horizontal',
-    loop: true,
     speed: 300,
     navigation: {
       nextEl: '.swiper-button-next',
@@ -193,8 +192,8 @@
     var modal = document.querySelector('.gallary-modal');
     
     mySwiper.updateActiveIndex(gallaryIndex);
-    console.log(mySwiper.activeIndex);
-    alert(mySwiper.activeIndex);
+    // mySwiper.slideTo(gallaryIndex);
+    // mySwiper.update(); // Swiper 업데이트
     toggleElement('gallary-modal');
   };
 </script>
