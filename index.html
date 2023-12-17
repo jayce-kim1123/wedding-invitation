@@ -155,13 +155,35 @@
         });
     }
 
+  function adjustCalender() {
+    const weekElements = document.querySelector('#calendar .week');
+    const firstWeekChildElements = Array.from(weekElements.children);
+    let calendarGap;
+
+    for (let i = 1; i < firstWeekChildElements.length; i++) {
+      const prevElement = firstWeekChildElements[i - 1];
+      const currentElement = firstWeekChildElements[i];
+      const gap = currentElement.offsetLeft - (prevElement.offsetLeft + prevElement.offsetWidth);
+      calendarGap = gap;
+      break;
+    }
+    document.getElementById('calendar').style.gap = calendarGap + 'px';
+    console.log('Calendar Gap:', calendarGap);
+  };
+
   window.addEventListener('orientationchange', function() {
     setImagesquare('gallary-img');
+    adjustCalender();
   });
 
-    window.addEventListener('load', function() {
-        setImagesquare('gallary-img');
-    });
+  window.addEventListener('resize', function() {
+    adjustCalender();
+  });
+
+  window.addEventListener('load', function() {
+    setImagesquare('gallary-img');
+    adjustCalender();
+  });
 
   function toggleElement(targetId) {
     var targetElement = document.getElementById(targetId);
@@ -525,7 +547,7 @@
         <div id ="kakaotalk-sharing-btn" class="button sharing-btn text"  href="javascript:;">
           카카오톡 공유하기
         </div>
-        <div id ="link-sharing-button" class="button sharing-btn text" style="margin-top: 6px; margin-bottom: 60px;" onclick="copyToClipboard('invitaiton-link')">
+        <div id ="link-sharing-button" class="button sharing-btn text" style="margin-top: 6px;" onclick="copyToClipboard('invitaiton-link')">
           링크주소 복사하기
         </div>
     </div>
