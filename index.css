@@ -545,7 +545,7 @@ body {
     display: flex;
     flex-direction: column;
     align-self: stretch;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
 }
 
 #account {
