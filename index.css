@@ -361,8 +361,8 @@ body {
     object-fit: contain;
 }
 
-.swiper-slide-active {
-    display: block !important;
+.swiper-slide {
+    display: flex !important;
 }
 
 #date-area {
