@@ -76,10 +76,12 @@ body {
     align-items: center;
 }
 
-.contents-area {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.area-mw-full {
+    max-width: 100%;
+}
+
+.margin-0-30 {
+    margin: 0px 30px;
 }
 
 #banner-frame {
@@ -87,7 +89,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 100%;
 }
 
 #banner-img {
@@ -142,12 +143,6 @@ body {
     line-height: 140%;
 }
 
-.contents-area {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 0 30px;
-}
-
 .contents {
     margin-top: 70px;
 }
@@ -163,7 +158,9 @@ body {
 #welcome-message-area {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    align-self: stretch;
 }
 
 #welcome-message {
@@ -172,12 +169,6 @@ body {
     align-items: center;
     margin-bottom: 40px;
     line-height: 30px;
-}
-
-#family-contects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 #family {
@@ -219,8 +210,8 @@ body {
     letter-spacing: 0.32px;
 }
 
-#contect-area {
-    width: 100%;
+#contect {
+    align-self: stretch;
 }
 
 #contect-button {
@@ -268,8 +259,6 @@ body {
 #our-story-area {
     display: flex;
     flex-direction: column;
-    width: 120%;
-    max-width: 440px;
 }
 
 #our-story-area .inner-contents {
@@ -310,7 +299,6 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 100%;
 }
 
 #gallary-area .images {
@@ -382,7 +370,7 @@ swiper-container img {
 #date-area {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    align-self: stretch;
     margin-top: 80px;
 }
 
@@ -398,10 +386,7 @@ swiper-container img {
 
 #calendar-area {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: fit-content;
+    align-self: stretch;
 }
 
 #calendar {
@@ -420,7 +405,6 @@ swiper-container img {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
 }
 
 #calendar .day {
@@ -539,8 +523,8 @@ swiper-container img {
 #account-area {
     display: flex;
     flex-direction: column;
+    align-self: stretch;
     margin-bottom: 30px;
-    width: 100%;
 }
 
 #account {
