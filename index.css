@@ -614,12 +614,16 @@ swiper-container img {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    height: 200px;
     width: 100%;
     background: #333;
 }
 
+#footer-area img {
+    width: inherit;
+}
+
 #copyright {
+    position: absolute;
     color: #FFF;
     font-size: 12px;
     margin-bottom: 18px;
