@@ -1,595 +1,934 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:url" content="https://subin-jiseong.com/">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/kakao_share-img.jpg">
-  <title>수빈, 지성 결혼합니다</title>
-  <link rel="stylesheet" href="./pretended.css">
-  <link rel="stylesheet" href="./index.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-</head>
-<div id="gallary-modal" class="gallary-modal hide">
-  <div class="swiper-container" css-mode="true" pagination="true" pagination-dynamic-bullets="true">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_0.jpg"></div>
-      <div class="swiper-slide"><img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_1.jpg"></div>
-      <div class="swiper-slide"><img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_2.jpg"></div>
-      <div class="swiper-slide"><img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_3.jpg"></div>
-      <div class="swiper-slide"><img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_4.jpg"></div>
-      <div class="swiper-slide"><img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_5.jpg"></div>
-      <div class="swiper-slide"><img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_6.jpg"></div>
-      <div class="swiper-slide"><img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_7.jpg"></div>
-      <div class="swiper-slide"><img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_8.jpg"></div>
-      <div class="swiper-slide"><img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_9.jpg"></div>
-      <div class="swiper-slide"><img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_10.jpg"></div>
-      <div class="swiper-slide"><img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_11.jpg"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:url" content="https://subin-jiseong.com/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/kakao_share-img.jpg"
+    />
+    <title>수빈, 지성 결혼합니다</title>
+    <link rel="stylesheet" href="./pretended.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script
+      src="https://t1.kakaocdn.net/kakao_js_sdk/2.5.0/kakao.min.js"
+      integrity="sha384-kYPsUbBPlktXsY6/oNHSUDZoTX6+YI51f63jCPEIPFP09ttByAdxd2mEjKuhdqn4"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      Kakao.init("8d50d760a5998f1ee6fdcdb552bbd9f9");
+    </script>
+  </head>
+  <div id="gallary-modal" class="gallary-modal hide">
+    <div
+      class="swiper-container"
+      css-mode="true"
+      pagination="true"
+      pagination-dynamic-bullets="true"
+    >
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_0.jpg"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_1.jpg"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_2.jpg"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_3.jpg"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_4.jpg"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_5.jpg"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_6.jpg"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_7.jpg"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_8.jpg"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_9.jpg"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_10.jpg"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_11.jpg"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="gallary-modal-btn-box">
+      <div class="gallary-modal-btn">
+        <img class="swiper-button-prev" src="/icons/btn_prev.svg" />
+      </div>
+      <div class="gallary-modal-btn">
+        <img class="swiper-button-next" src="/icons/btn_next.svg" />
+      </div>
+      <div class="gallary-modal-btn" onclick="toggleElement('gallary-modal')">
+        <img src="/icons/btn_close.svg" />
+      </div>
     </div>
   </div>
-  <div class="gallary-modal-btn-box">
-    <div class="gallary-modal-btn"><img class="swiper-button-prev" src="/icons/btn_prev.svg"></div>
-    <div class="gallary-modal-btn"><img class="swiper-button-next" src="/icons/btn_next.svg"></div>
-    <div class="gallary-modal-btn" onclick="toggleElement('gallary-modal')"><img src="/icons/btn_close.svg"></div>
-  </div>
-</div>
-<div id="invitaiton-link" hidden>https://subin-jiseong.com</div>
-<script>
-  const mySwiper = new Swiper('.swiper-container', {
-    direction: 'horizontal',
-    speed: 300,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
+  <div id="invitaiton-link" hidden>https://subin-jiseong.com</div>
+  <script>
+    const mySwiper = new Swiper(".swiper-container", {
+      direction: "horizontal",
+      speed: 300,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
 
-    document.addEventListener('dragstart', function (e) {
-        e.preventDefault();
+    document.addEventListener("dragstart", function (e) {
+      e.preventDefault();
     });
 
     function toggleDropdown(targetId) {
-        var targetElement = document.getElementById(targetId);
-        targetElement.classList.toggle('show');
+      var targetElement = document.getElementById(targetId);
+      targetElement.classList.toggle("show");
     }
 
     function toggleDropdownOtherHide(targetId, className) {
       const match = targetId.match(/\d+$/);
       var targetNum = match ? parseInt(match[0], 10) : null;
-      var targetLineClassName = "line-" + targetNum
-      var targetLine = document.querySelectorAll('.' + targetLineClassName);
-      var Line = document.querySelectorAll('.osic-line');
+      var targetLineClassName = "line-" + targetNum;
+      var targetLine = document.querySelectorAll("." + targetLineClassName);
+      var Line = document.querySelectorAll(".osic-line");
       var targetElement = document.getElementById(targetId);
-      var targetElements = document.querySelectorAll('.' + className);
-    
-        targetElements.forEach(function(element) {
-            element.classList.remove('show');
-        });
-        Line.forEach(function(element) {
-            element.classList.remove('hide');
-        });
-        targetLine.forEach(function(element) {
-            element.classList.add('hide');
-        });
-        targetElement.classList.add('show');
+      var targetElements = document.querySelectorAll("." + className);
+
+      targetElements.forEach(function (element) {
+        element.classList.remove("show");
+      });
+      Line.forEach(function (element) {
+        element.classList.remove("hide");
+      });
+      targetLine.forEach(function (element) {
+        element.classList.add("hide");
+      });
+      targetElement.classList.add("show");
     }
 
     function toggleArrowIcon(targetId) {
       var targetElement = document.getElementById(targetId);
-      var currentArrow = targetElement.getAttribute('src')
+      var currentArrow = targetElement.getAttribute("src");
       if (currentArrow === "/icons/btn_arrow_down.svg") {
-        targetElement.src = "/icons/btn_arrow_up.svg"
+        targetElement.src = "/icons/btn_arrow_up.svg";
       } else if (currentArrow === "/icons/btn_arrow_up.svg") {
-        targetElement.src = "/icons/btn_arrow_down.svg"
+        targetElement.src = "/icons/btn_arrow_down.svg";
       }
     }
 
     function connectArrowAndDropdownBox(arrowId, dropdownId) {
-      var dropdownElement = document.getElementById(dropdownId)
-      var arrowElement = document.getElementById(arrowId)
+      var dropdownElement = document.getElementById(dropdownId);
+      var arrowElement = document.getElementById(arrowId);
 
-      if (dropdownElement.classList.contains('show')) {
-        arrowElement.src = "/icons/btn_arrow_up.svg"
+      if (dropdownElement.classList.contains("show")) {
+        arrowElement.src = "/icons/btn_arrow_up.svg";
       } else {
-        arrowElement.src = "/icons/btn_arrow_down.svg"
+        arrowElement.src = "/icons/btn_arrow_down.svg";
       }
     }
 
-    window.addEventListener('click', function() {
-      connectArrowAndDropdownBox('osai-1', 'osddb-1');
-      connectArrowAndDropdownBox('osai-2', 'osddb-2');
-      connectArrowAndDropdownBox('osai-3', 'osddb-3');
-      connectArrowAndDropdownBox('osai-4', 'osddb-4');
-      connectArrowAndDropdownBox('osai-5', 'osddb-5');
+    window.addEventListener("click", function () {
+      connectArrowAndDropdownBox("osai-1", "osddb-1");
+      connectArrowAndDropdownBox("osai-2", "osddb-2");
+      connectArrowAndDropdownBox("osai-3", "osddb-3");
+      connectArrowAndDropdownBox("osai-4", "osddb-4");
+      connectArrowAndDropdownBox("osai-5", "osddb-5");
     });
 
     function setBGColorOnlyThis(targetId, className, color) {
-        var targetElement = document.getElementById(targetId);
-        var targetElements = document.querySelectorAll('.' + className);
-        targetElements.forEach(function(element) {
-            element.style.background = null;
-        });
-        targetElement.style.backgroundColor = color;
+      var targetElement = document.getElementById(targetId);
+      var targetElements = document.querySelectorAll("." + className);
+      targetElements.forEach(function (element) {
+        element.style.background = null;
+      });
+      targetElement.style.backgroundColor = color;
     }
 
     function openLink(linkUrl) {
-        window.open(linkUrl, "_blank");
+      window.open(linkUrl, "_blank");
     }
 
     function copyToClipboard(elementId) {
-        var accountNumber = document.getElementById(elementId).innerText;
+      var accountNumber = document.getElementById(elementId).innerText;
 
-        // 임시 textarea를 생성하여 텍스트 복사
-        var textarea = document.createElement("textarea");
-        textarea.value = accountNumber;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textarea);
+      // 임시 textarea를 생성하여 텍스트 복사
+      var textarea = document.createElement("textarea");
+      textarea.value = accountNumber;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
 
-        // 복사가 완료되었다는 메시지 등을 추가할 수 있습니다.
-        alert('복사됐습니당!');
+      // 복사가 완료되었다는 메시지 등을 추가할 수 있습니다.
+      alert("복사됐습니당!");
     }
 
     function smoothScrollTo(targetId, tabIndex) {
-        var targetElement = document.getElementById(targetId);
-        document.querySelectorAll('.tab-item').forEach(function(element, index) {
-            element.classList.remove('text-111');
-            element.classList.add('text-999');
-            if (index === tabIndex) {
-                element.classList.add('text-111');
-            }
-        });
-        if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest', offsetTop: 1000 });
+      var targetElement = document.getElementById(targetId);
+      document.querySelectorAll(".tab-item").forEach(function (element, index) {
+        element.classList.remove("text-111");
+        element.classList.add("text-999");
+        if (index === tabIndex) {
+          element.classList.add("text-111");
         }
+      });
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest",
+          offsetTop: 1000,
+        });
+      }
     }
 
     function setImagesquare(className) {
-        document.querySelectorAll('.' + className).forEach(function(element) {
-            var width = element.clientWidth;
-            element.style.height = width + 'px';
-        });
+      document.querySelectorAll("." + className).forEach(function (element) {
+        var width = element.clientWidth;
+        element.style.height = width + "px";
+      });
     }
 
-  function adjustCalender() {
-    const weekElements = document.querySelector('#calendar .week');
-    const firstWeekChildElements = Array.from(weekElements.children);
-    let calendarGap;
+    function adjustCalender() {
+      const weekElements = document.querySelector("#calendar .week");
+      const firstWeekChildElements = Array.from(weekElements.children);
+      let calendarGap;
 
-    for (let i = 1; i < firstWeekChildElements.length; i++) {
-      const prevElement = firstWeekChildElements[i - 1];
-      const currentElement = firstWeekChildElements[i];
-      const gap = currentElement.offsetLeft - (prevElement.offsetLeft + prevElement.offsetWidth);
-      calendarGap = gap;
-      break;
+      for (let i = 1; i < firstWeekChildElements.length; i++) {
+        const prevElement = firstWeekChildElements[i - 1];
+        const currentElement = firstWeekChildElements[i];
+        const gap =
+          currentElement.offsetLeft -
+          (prevElement.offsetLeft + prevElement.offsetWidth);
+        calendarGap = gap;
+        break;
+      }
+      document.getElementById("calendar").style.gap = calendarGap + "px";
     }
-    document.getElementById('calendar').style.gap = calendarGap + 'px';
-  };
 
-  window.addEventListener('orientationchange', function() {
-    setImagesquare('gallary-img');
-    adjustCalender();
-  });
-
-  window.addEventListener('resize', function() {
-    adjustCalender();
-  });
-
-  window.addEventListener('load', function() {
-    setImagesquare('gallary-img');
-    adjustCalender();
-  });
-
-  function toggleElement(targetId) {
-    var targetElement = document.getElementById(targetId);
-    targetElement.classList.toggle('hide');
-  }
-
-  function openGallary(gallaryIndex) {
-    var modal = document.querySelector('.gallary-modal');
-    mySwiper.init();
-    // mySwiper.updateActiveIndex(gallaryIndex);
-    mySwiper.slideTo(gallaryIndex);
-    mySwiper.update(); // Swiper 업데이트
-    toggleElement('gallary-modal');
-  };
-</script>
-<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.5.0/kakao.min.js" integrity="sha384-kYPsUbBPlktXsY6/oNHSUDZoTX6+YI51f63jCPEIPFP09ttByAdxd2mEjKuhdqn4" crossorigin="anonymous"></script>
-<script>
-    Kakao.init('8d50d760a5998f1ee6fdcdb552bbd9f9');
-</script>
-<body>
-    <div id="base">
-        <div id="banner-frame" class="area-mw-full">
-            <img id="banner-img" src="/images/banner.jpg">
-        </div>
-        <div id="fixed-start" class="margin-0-30"></div>
-        <div id="tab" class="area-mw-full">
-            <div id="tab-inner">
-                <div class="tab-item text-111" onclick="smoothScrollTo('fixed-start', 0)">초대합니다</div>
-                <div class="tab-item text-999" onclick="smoothScrollTo('scroll-point-story', 1)">우리의 이야기</div>
-                <div class="tab-item text-999" onclick="smoothScrollTo('scroll-point-gallary', 2)">갤러리</div>
-                <div class="tab-item text-999" onclick="smoothScrollTo('scroll-point-date', 3)">일시&장소</div>
-            </div>
-        </div>
-        <div id="welcome-message-area" class="contents margin-0-30">
-            <div id="welcome-message">
-                <span>차디찬 바람이 세차게 불던 어느 겨울날,</span>
-                <span>각자의 반을 나누기로 약속했습니다.</span>
-                <span>11년이 되는 그 날</span>
-                <span>이제는 서로의 전부가 되려 합니다.</span>
-                <br>
-                <span>어느 겨울날의 땅처럼,</span>
-                <span>지금껏 함께 단단해진 저희의 끝과</span>
-                <span>앞으로 더욱 단단해질 저희의 시작을</span>
-                <span>많은 분들 앞에서 보여드리려 합니다.</span>
-                <br>
-                <span>귀한 걸음 하시어 지켜봐 주시고</span>
-                <span>축하해 주시면 감사하겠습니다.</span>
-            </div>
-            <div id="family">
-                <span id="parents-text-area">
-                    <p><span class="parents">김현진・정금여</span><span class="dml">의 아들</span></p>
-                    <p><span class="parents">오덕흠・김주하</span><span class="dml">의 딸</span></p>
-                </span>
-                <span id="us-text-area">
-                    <span class="us">지성</span>
-                    <span class="us">수빈</span>
-                </span>
-            </div>
-            <div id="contect">
-                <div id="contect-button" onclick="toggleDropdown('contect-box'), toggleArrowIcon('contect-button-arrow')">
-                    <div id="button-inner">
-                        <div id="button-text text">
-                            직접 연락하기
-                        </div>
-                        <img id="contect-button-arrow" class="icon" src="/icons/btn_arrow_down.svg">
-                    </div>
-                </div>
-                <div id="contect-box">
-                    <div class="contect-box-item" style="margin-bottom: 15px;">
-                        <span style="margin-right: 16px;">신랑</span>
-                        <span style="margin-right: auto;">김지성</span>
-                        <div id="phone" style="margin-left: 24px;">
-                          <a href="tel:01025545466">
-                            <img class="icon" src="/icons/phone.svg" alt="">
-                          </a>
-                        </div>
-                        <div id="message" style="margin-left: 24px;">
-                          <a href="sms:01025545466">
-                            <img class="icon" src="/icons/message.svg" alt="">
-                          </a>
-                        </div>
-                    </div>
-                    <div class="contect-box-item">
-                        <span style="margin-right: 16px;">신부</span>
-                        <span style="margin-right: auto;">오수빈</span>
-                        <div id="phone" style="margin-left: 24px;">
-                          <a href="tel:01048145570">
-                            <img class="icon" src="/icons/phone.svg" alt="">
-                          </a>
-                        </div>
-                        <div id="message" style="margin-left: 24px;">
-                          <a href="sms:01048145570">
-                            <img class="icon" src="/icons/message.svg" alt="">
-                          </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="scroll-point-story" class="margin-0-30"></div>
-        <div id="our-story-area" class="contents area-mw-full">
-          <div class="subject" style="margin-left: 30px;">
-              우리의 이야기
-          </div>
-            <div id="osic-1" class="inner-contents osic" style="background-color: #F5F5F5;" onclick="toggleDropdownOtherHide('osddb-1', 'dropdown-box'), setBGColorOnlyThis('osic-1', 'osic', '#F5F5F5')">
-              <div class="contents-question text">
-                  <span>둘은 어떻게 만났나요?</span>
-                  <img id="osai-1" class="icon" src="/icons/btn_arrow_down.svg" alt="">
-              </div>
-              <div id="osddb-1" class="dropdown-box show">
-                  <span class="contents-answer">
-                    <p>2012년 겨울, 23살의 신부와 20살의 신랑이 함께 일했던 카페에서 처음 만났어요. 누나 동생 사이에서 적극적인 신랑의 대시로 사귀게 되었어요.</p>
-                    <br>
-                    <p>썸의 시작을 알리는 첫 데이트는 영화관에서 했고 타워라는 영화를 봤어요. 그날 먹은 건 쌀국수에요! 손도 쌀국수 집 가는 길 횡단보도에서 처음 잡았답니다. 제가 갑자기 손을 잡았을 때 이런저런 감정이 보이던 수빈이 얼굴이 지금도 잊히지 않네요. 그 표정에 한 번 더 반했었나 봐요.</p>
-                  </span>
-              </div>
-            </div>
-            <div class="line osic-line line-1 line-2 hide"></div>
-            <div id="osic-2" class="inner-contents osic" onclick="toggleDropdownOtherHide('osddb-2', 'dropdown-box'), setBGColorOnlyThis('osic-2', 'osic', '#F5F5F5')">
-              <div class="contents-question text">
-                  <span>신랑🐶 김지성은 어떤 사람인가요?</span>
-                  <img id="osai-2" class="icon" src="/icons/btn_arrow_down.svg" alt="">
-              </div>
-              <div id="osddb-2" class="dropdown-box">
-                  <span class="contents-answer lh-26">
-                    <p>"뜨거운 햇살 같기도, 차가운 밤바다 같기도 한 그런 사람"</p>
-                    <br>
-                    <p>한마디로 극 E와 극 I가 공존하는 것 같은 다채로운 사람입니다. 어딜 가든 재미있게 분위기 메이커 역할을 톡톡히 하기도 하고, 반면에 혼자만의 시간을 좋아하는 사람이에요. 언제나 똑 부러지는 철두철미한 사람, 집에서는 한없이 다정다감하고 사랑을 표현하는 사람, 혼자는 라면만 먹지만 함께하는 식사는 진심을 다해서 차려주는 그런 사람입니다. 주변 사람들을 챙길 줄 알고 무슨 일이든 믿고 맡길 수 있는 사람이죠.</p>
-                    <br>
-                    <p>귀여운 모든 것들, 새로운 지식을 탐구하는 것, 게임하는 것, 맛있는 것을 먹고 요리하는 것, 집에서 뒹굴뒹굴하는 것, 고양이와 노는 것을 좋아해요. 제 눈에는 한없이 귀엽고 멋있는 사람이고, 주어진 것에 감사하고 앞으로 나아갈 길을 함께 찾아나갈 수 있는 배울 점이 많은 사람이기도 합니다. 오랜 시간 함께했지만, 앞으로 함께할 시간들이 더 기대가 됩니다 : )</p>
-                  </span>
-              </div>
-            </div>
-            <div class="line osic-line line-2 line-3"></div>
-            <div id="osic-3" class="inner-contents osic" onclick="toggleDropdownOtherHide('osddb-3', 'dropdown-box'), setBGColorOnlyThis('osic-3', 'osic', '#F5F5F5')">
-              <div class="contents-question text">
-                  <span>신부🐻‍❄️ 오수빈은 어떤 사람인가요?</span>
-                  <img id="osai-3" class="icon" src="/icons/btn_arrow_down.svg" alt="">
-              </div>
-              <div id="osddb-3" class="dropdown-box">
-                  <span class="contents-answer lh-26">
-                    <p>"아무 일 없는 휴일, 마침 날씨도 좋을 때의 느낌 같은 사람"<p>
-                    <br>
-                    <p>휴일 싫어하는 사람 거의 없잖아요? 마찬가지로 주변에 적이 없습니다. 진짜 주변 사람 모두 수빈이를 좋아해요. 유유상종이라고 주변에도 좋은 사람들만 모입니다.<p>
-                    <p>귀여운 모든 것들, 해피엔딩으로 끝나는 영화, 소소한 것들, 새로운 곳을 가보는 것, 맛있는 것을 먹는 것, 스르르 잠드는 것을 좋아해요. 노래는 꽂히는 노래 몇 개만 계속 들어요.<p>
-                    <br>
-                    <p>표현할 수 있는 말이 또 뭐가 있을까요.. 예쁘고 착한 건 너무 당연하고... 감사할 줄 아는 사람이기도 하고.... 제가 아는 단어들로는 피상적인 표현 밖에 할 수 없는 게 아쉽네요. 앞으로 같이 시간을 보내며 표현할 수 있는 말들을 더 찾아보도록 하겠습니다.</p>
-                  </span>
-              </div>
-            </div>
-            <div class="line osic-line line-3 line-4"></div>
-            <div id="osic-4" class="inner-contents osic" onclick="toggleDropdownOtherHide('osddb-4', 'dropdown-box'), setBGColorOnlyThis('osic-4', 'osic', '#F5F5F5')">
-              <div class="contents-question text">
-                  <span>신혼여행은 어디로 가나요?</span>
-                  <img id="osai-4" class="icon" src="/icons/btn_arrow_down.svg" alt="">
-              </div>
-              <div id="osddb-4" class="dropdown-box">
-                  <span class="contents-answer lh-26">
-                      <p>유럽으로 2주 정도 갑니다! 따뜻한 4월 말에 이탈리아로 들어가서 스위스로 나와요.</p>
-                      <br>
-                      <p>요리를 좋아하는 신랑이 이탈리아를 골랐고</p>
-                      <p>자연 풍경을 좋아하는 신부가 스위스를 골랐어요.</p>
-                      <br>
-                      <p>신부는 스위스에 가보는 게 버킷리스트였을 정도로 엄청 기대 중이에요. 여행을 별로 좋아하지 않는 신랑도 이탈리아 식재료를 경험할 생각에 사실 조금 많이 기대 중이랍니다.</p>
-                      <br>
-                      <p>저희 둘 다 여행은 휴양보다 경험이라고 생각해서 호화로운 여행이 아닌 가성비 있는 배낭여행으로 계획 중이랍니다. 오랜만에 가는 여행이니 언젠가 추억으로 남을 기억을 잔뜩 만들고 돌아오겠습니다.</p>
-                  </span>
-              </div>
-            </div>
-            <div class="line osic-line  line-4 line-5"></div>
-            <div id="osic-5" class="inner-contents osic" onclick="toggleDropdownOtherHide('osddb-5', 'dropdown-box'), setBGColorOnlyThis('osic-5', 'osic', '#F5F5F5')">
-              <div class="contents-question text">
-                  <span>축하해주시는 분들께 전하고 싶은 한마디</span>
-                  <img id="osai-5" class="icon" src="/icons/btn_arrow_down.svg" alt="">
-              </div>
-              <div id="osddb-5" class="dropdown-box">
-                  <span class="contents-answer lh-26">
-                    <p>네, 저희 드디어 합니다. 결혼.</p>
-                    <br>
-                    <p>지성: 아마 저희 결혼식에 와주시는 분들 대부분 도대체 언제 결혼할 거냐라고 한 번쯤은 신랑신부에게 질문하셨을 거예요ㅋㅋ 여러분들의 응원 덕분에 정확히 사귄 지 11년이 되는 날 시집 장가를 가게 됐습니다. 저희가 결혼은 처음이라.. 좀 서투를 수도 있지만 늘 그랬듯 잘 이겨내며 살아보겠습니다. 축하해 주셔서 너무 감사드립니다.</p>
-                    <br>
-                    <p>수빈: 매번 내년에, 내후년에 할 거라던 그 결혼 드디어 하게 되었습니다! 좋은 날도 힘든 날도 으쌰 으쌰 함께 잘 이겨낸 저희이지만, 결혼이라는 이벤트 앞에서는 서툰 모습을 보일 수도 있을 것 같아요. 그렇지만 앞서 지성이의 말처럼 언제나 늘 그랬듯 앞으로도 잘 헤쳐나가면서 행복하게 잘 살겠습니다. 긴 시간 저희를 응원해 주시고 함께해 주신 모든 분들께 진심으로 감사드립니다.</p>
-                  </span>
-              </div>
-            </div>
-        </div>
-        <div id="scroll-point-gallary" class="margin-0-30"></div>
-        <div id="gallary-area" class="contents margin-0-30">
-            <div class="subject">
-                갤러리
-            </div>
-            <div class="gallary">
-                <div class="images">
-                  <div class="image-stack">
-                    <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_0.jpg" class="gallary-img img" onclick="openGallary(0)"></img>
-                    <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_1.jpg" class="gallary-img img" onclick="openGallary(1)"></img>
-                    <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_2.jpg" class="gallary-img img" onclick="openGallary(2)"></img>
-                  </div>
-                  <div class="image-stack">
-                    <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_3.jpg" class="gallary-img img" onclick="openGallary(3)"></img>
-                    <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_4.jpg" class="gallary-img img" onclick="openGallary(4)"></img>
-                    <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_5.jpg" class="gallary-img img" onclick="openGallary(5)"></img>
-                  </div>
-                  <div class="image-stack">
-                    <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_6.jpg" class="gallary-img img" onclick="openGallary(6)"></img>
-                    <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_7.jpg" class="gallary-img img" onclick="openGallary(7)"></img>
-                    <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_8.jpg" class="gallary-img img" onclick="openGallary(8)"></img>
-                  </div>
-                  <div class="image-stack">
-                    <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_9.jpg" class="gallary-img img" onclick="openGallary(9)"></img>
-                    <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_10.jpg" class="gallary-img img" onclick="openGallary(10)"></img>
-                    <img src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_11.jpg" class="gallary-img img" onclick="openGallary(11)"></img>
-                  </div>
-                </div>
-            </div>
-        </div>
-        <div id="scroll-point-date" class="margin-0-30"></div>
-        <div id="date-area" class="contents margin-0-30">
-            <div class="inner-contents">
-                <p>2024년 1월 27일 토요일</p>
-                <p>낮 12시 30분</p>
-            </div>
-            <div id="calendar-area">
-                <div id="calendar">
-                    <div class="week">
-                        <div class="day">일</div>
-                        <div class="day">월</div>
-                        <div class="day">화</div>
-                        <div class="day">수</div>
-                        <div class="day">목</div>
-                        <div class="day">금</div>
-                        <div class="day">토</div>
-                    </div>
-                    <div class="week">
-                        <div class="day"></div>
-                        <div class="day">1</div>
-                        <div class="day">2</div>
-                        <div class="day">3</div>
-                        <div class="day">4</div>
-                        <div class="day">5</div>
-                        <div class="day">6</div>
-                    </div>
-                    <div class="week">
-                        <div class="day">7</div>
-                        <div class="day">8</div>
-                        <div class="day">9</div>
-                        <div class="day">10</div>
-                        <div class="day">11</div>
-                        <div class="day">12</div>
-                        <div class="day">13</div>
-                    </div>
-                    <div class="week">
-                        <div class="day">14</div>
-                        <div class="day">15</div>
-                        <div class="day">16</div>
-                        <div class="day">17</div>
-                        <div class="day">18</div>
-                        <div class="day">19</div>
-                        <div class="day">20</div>
-                    </div>
-                    <div class="week">
-                        <div class="day">21</div>
-                        <div class="day">22</div>
-                        <div class="day">23</div>
-                        <div class="day">24</div>
-                        <div class="day">25</div>
-                        <div class="day">26</div>
-                        <div class="day highlight">27</div>
-                    </div>
-                    <div class="week">
-                        <div class="day">28</div>
-                        <div class="day">29</div>
-                        <div class="day">30</div>
-                        <div class="day">31</div>
-                        <div class="day"></div>
-                        <div class="day"></div>
-                        <div class="day"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="location-area" class="contents margin-0-30">
-            <div class="subject">
-                오시는 길
-            </div>
-            <div id="map-area">
-                <div id="location-text" class="inner-contents">
-                    <div id="location">
-                        <span id="location-name">아펠가모 공덕점 라로브홀</span>
-                        <span id="copy-location" class="button text" onclick="copyToClipboard('location-text')">위치복사</span>
-                    </div>
-                    <div id="address">
-                        <p>서울특별시 마포구 마포대로 92 효성 해링턴스퀘어 B동 7층</p>
-                        <p>지번 :  서울특별시 마포구 도화동 25-13</p>
-                    </div>
-                </div>
-                <div id="map" class="inner-contents">
-                  <img src="/images/map.png">
-                </div>
-                <div id="app_link" class="inner-contents">
-                    <div class="map-button button" onclick="openLink('https://naver.me/G6Dy5yIN')">네이버 지도</div>
-                    <div class="map-button button" onclick="openLink('https://kko.to/eSva9XPWrY')">카카오 맵</div>
-                </div>
-            </div>
-            <div id="traffic-area">
-                <div class="inner-contents">
-                    <div class="inner-subject">지하철</div>
-                    <div class="inner-text">
-                        <p>[경의중앙선, 공항철도, 5호선, 6호선]</p>
-                        <p>공덕역 10번 출구 방향으로 나와 유턴 후, 전방 50미터 우측 '효성 해링턴스퀘어 B동'</p>
-                    </div>
-                </div>
-                <div class="inner-contents">
-                    <div class="inner-subject">버스</div>
-                    <div class="inner-text">160, 260, 660, 7013A, 7013B, 7611, 마포3, 마포10, 1002</div>
-                </div>
-                <div class="inner-contents">
-                    <div class="inner-subject">주차 안내</div>
-                    <div class="inner-text">
-                        <p>내비게이션 ‘공덕역 10번 출구' 검색 시 주차장 입구,</p>
-                        <p>도착 후 주차 안내 받으세요.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="account-area" class="contents margin-0-30">
-            <div class="subject">
-                마음 전하실 곳
-            </div>
-            <div id="account">
-                <div class="dropdown" onclick="toggleDropdown('groom-account'), toggleArrowIcon('groom-account-arrow')">
-                    <div class="account-group">신랑측 계좌번호</div>
-                    <img id="groom-account-arrow" class="icon" src="/icons/btn_arrow_down.svg">
-                </div>
-                <div id="groom-account" class="dropdown-box">
-                    <div class="account-info">
-                        <span class="account-owner text">정금여</span>
-                        <span class="account-number text" id="accountNumber1">국민  675601-01-056788</span>
-                        <span class="copy-button button text" onclick="copyToClipboard('accountNumber1')">복사</span>
-                    </div>
-                    <div class="account-info">
-                        <span class="account-owner text">김지성</span>
-                        <span class="account-number text" id="accountNumber2">토스뱅크  1000-0871-1379</span>
-                        <span class="copy-button button text" onclick="copyToClipboard('accountNumber2')">복사</span>
-                    </div>
-                </div>
-                <div class="dropdown" onclick="toggleDropdown('bride-account'), toggleArrowIcon('bride-account-arrow')" style="margin-top: 6px;">
-                    <div class="account-group">신부측 계좌번호</div>
-                    <img id="bride-account-arrow" class="icon" src="/icons/btn_arrow_down.svg">
-                </div>
-                <div id="bride-account" class="dropdown-box">
-                    <div class="account-info">
-                        <span class="account-owner text">오덕흠</span>
-                        <span class="account-number text" id="accountNumber3">국민  645-21-0025-017</span>
-                        <span class="copy-button button text" onclick="copyToClipboard('accountNumber3')">복사</span>
-                    </div>
-                    <div class="account-info">
-                        <span class="account-owner text">김주하</span>
-                        <span class="account-number text" id="accountNumber4">카카오  3333-03-7545257</span>
-                        <span class="copy-button button text" onclick="copyToClipboard('accountNumber4')">복사</span>
-                    </div>
-                    <div class="account-info">
-                        <span class="account-owner text">오수빈</span>
-                        <span class="account-number text" id="accountNumber5">우리 1002-556-207089</span>
-                        <span class="copy-button button text" onclick="copyToClipboard('accountNumber5')">복사</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id ="kakaotalk-sharing-btn" class="button sharing-btn text"  href="javascript:;">
-          카카오톡 공유하기
-        </div>
-        <div id ="link-sharing-button" class="button sharing-btn text" style="margin-top: 6px;" onclick="copyToClipboard('invitaiton-link')">
-          링크주소 복사하기
-        </div>
-    </div>
-</body>
-<footer>
-  <div id="footer-area">
-    <img src="/images/footer_img.jpg">
-    <p id="copyright">&copy; 2023-2099 subin & jiseong. All rights reserved.</p>
-  </div>
-</footer>
-<script>
-    Kakao.Share.createCustomButton({
-        container: '#kakaotalk-sharing-btn',
-        templateId: 100591,
-        templateArgs: {}
+    window.addEventListener("orientationchange", function () {
+      setImagesquare("gallary-img");
+      adjustCalender();
     });
-</script>
-<script>
-    function handleScroll() {
-        var startElement = document.getElementById('fixed-start');
-        var tabElement = document.getElementById('tab');
-        var startRect = startElement.getBoundingClientRect();
-        
-        if (startRect.top <= 0) {
-            startElement.classList.add('tab-size-box');
-            tabElement.classList.add('fixed');
-        } else {
-            startElement.classList.remove('tab-size-box');
-            tabElement.classList.remove('fixed');
-        }
+
+    window.addEventListener("resize", function () {
+      adjustCalender();
+    });
+
+    window.addEventListener("load", function () {
+      setImagesquare("gallary-img");
+      adjustCalender();
+    });
+
+    function toggleElement(targetId) {
+      var targetElement = document.getElementById(targetId);
+      targetElement.classList.toggle("hide");
     }
-    // 페이지 로딩시 한번 호출하여 초기 상태 설정
+
+    function openGallary(gallaryIndex) {
+      var modal = document.querySelector(".gallary-modal");
+      mySwiper.init();
+      // mySwiper.updateActiveIndex(gallaryIndex);
+      mySwiper.slideTo(gallaryIndex);
+      mySwiper.update(); // Swiper 업데이트
+      toggleElement("gallary-modal");
+    }
+  </script>
+  <body>
+    <div id="base">
+      <div id="banner-frame" class="area-mw-full">
+        <img id="banner-img" src="/images/banner.jpg" />
+      </div>
+      <div id="fixed-start" class="margin-0-30"></div>
+      <div id="tab" class="area-mw-full">
+        <div id="tab-inner">
+          <div
+            class="tab-item text-111"
+            onclick="smoothScrollTo('fixed-start', 0)"
+          >
+            초대합니다
+          </div>
+          <div
+            class="tab-item text-999"
+            onclick="smoothScrollTo('scroll-point-story', 1)"
+          >
+            우리의 이야기
+          </div>
+          <div
+            class="tab-item text-999"
+            onclick="smoothScrollTo('scroll-point-gallary', 2)"
+          >
+            갤러리
+          </div>
+          <div
+            class="tab-item text-999"
+            onclick="smoothScrollTo('scroll-point-date', 3)"
+          >
+            일시&장소
+          </div>
+        </div>
+      </div>
+      <div id="welcome-message-area" class="contents margin-0-30">
+        <div id="welcome-message">
+          <span>차디찬 바람이 세차게 불던 어느 겨울날,</span>
+          <span>각자의 반을 나누기로 약속했습니다.</span>
+          <span>11년이 되는 그 날</span>
+          <span>이제는 서로의 전부가 되려 합니다.</span>
+          <br />
+          <span>어느 겨울날의 땅처럼,</span>
+          <span>지금껏 함께 단단해진 저희의 끝과</span>
+          <span>앞으로 더욱 단단해질 저희의 시작을</span>
+          <span>많은 분들 앞에서 보여드리려 합니다.</span>
+          <br />
+          <span>귀한 걸음 하시어 지켜봐 주시고</span>
+          <span>축하해 주시면 감사하겠습니다.</span>
+        </div>
+        <div id="family">
+          <span id="parents-text-area">
+            <p>
+              <span class="parents">김현진・정금여</span
+              ><span class="dml">의 아들</span>
+            </p>
+            <p>
+              <span class="parents">오덕흠・김주하</span
+              ><span class="dml">의 딸</span>
+            </p>
+          </span>
+          <span id="us-text-area">
+            <span class="us">지성</span>
+            <span class="us">수빈</span>
+          </span>
+        </div>
+        <div id="contect">
+          <div
+            id="contect-button"
+            onclick="toggleDropdown('contect-box'), toggleArrowIcon('contect-button-arrow')"
+          >
+            <div id="button-inner">
+              <div id="button-text text">직접 연락하기</div>
+              <img
+                id="contect-button-arrow"
+                class="icon"
+                src="/icons/btn_arrow_down.svg"
+              />
+            </div>
+          </div>
+          <div id="contect-box">
+            <div class="contect-box-item" style="margin-bottom: 15px">
+              <span style="margin-right: 16px">신랑</span>
+              <span style="margin-right: auto">김지성</span>
+              <div id="phone" style="margin-left: 24px">
+                <a href="tel:01025545466">
+                  <img class="icon" src="/icons/phone.svg" alt="" />
+                </a>
+              </div>
+              <div id="message" style="margin-left: 24px">
+                <a href="sms:01025545466">
+                  <img class="icon" src="/icons/message.svg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="contect-box-item">
+              <span style="margin-right: 16px">신부</span>
+              <span style="margin-right: auto">오수빈</span>
+              <div id="phone" style="margin-left: 24px">
+                <a href="tel:01048145570">
+                  <img class="icon" src="/icons/phone.svg" alt="" />
+                </a>
+              </div>
+              <div id="message" style="margin-left: 24px">
+                <a href="sms:01048145570">
+                  <img class="icon" src="/icons/message.svg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="scroll-point-story" class="margin-0-30"></div>
+      <div id="our-story-area" class="contents area-mw-full">
+        <div class="subject" style="margin-left: 30px">우리의 이야기</div>
+        <div
+          id="osic-1"
+          class="inner-contents osic"
+          style="background-color: #f5f5f5"
+          onclick="toggleDropdownOtherHide('osddb-1', 'dropdown-box'), setBGColorOnlyThis('osic-1', 'osic', '#F5F5F5')"
+        >
+          <div class="contents-question text">
+            <span>둘은 어떻게 만났나요?</span>
+            <img
+              id="osai-1"
+              class="icon"
+              src="/icons/btn_arrow_down.svg"
+              alt=""
+            />
+          </div>
+          <div id="osddb-1" class="dropdown-box show">
+            <span class="contents-answer">
+              <p>
+                2012년 겨울, 23살의 신부와 20살의 신랑이 함께 일했던 카페에서
+                처음 만났어요. 누나 동생 사이에서 적극적인 신랑의 대시로 사귀게
+                되었어요.
+              </p>
+              <br />
+              <p>
+                썸의 시작을 알리는 첫 데이트는 영화관에서 했고 타워라는 영화를
+                봤어요. 그날 먹은 건 쌀국수에요! 손도 쌀국수 집 가는 길
+                횡단보도에서 처음 잡았답니다. 제가 갑자기 손을 잡았을 때
+                이런저런 감정이 보이던 수빈이 얼굴이 지금도 잊히지 않네요. 그
+                표정에 한 번 더 반했었나 봐요.
+              </p>
+            </span>
+          </div>
+        </div>
+        <div class="line osic-line line-1 line-2 hide"></div>
+        <div
+          id="osic-2"
+          class="inner-contents osic"
+          onclick="toggleDropdownOtherHide('osddb-2', 'dropdown-box'), setBGColorOnlyThis('osic-2', 'osic', '#F5F5F5')"
+        >
+          <div class="contents-question text">
+            <span>신랑🐶 김지성은 어떤 사람인가요?</span>
+            <img
+              id="osai-2"
+              class="icon"
+              src="/icons/btn_arrow_down.svg"
+              alt=""
+            />
+          </div>
+          <div id="osddb-2" class="dropdown-box">
+            <span class="contents-answer lh-26">
+              <p>"뜨거운 햇살 같기도, 차가운 밤바다 같기도 한 그런 사람"</p>
+              <br />
+              <p>
+                한마디로 극 E와 극 I가 공존하는 것 같은 다채로운 사람입니다.
+                어딜 가든 재미있게 분위기 메이커 역할을 톡톡히 하기도 하고,
+                반면에 혼자만의 시간을 좋아하는 사람이에요. 언제나 똑 부러지는
+                철두철미한 사람, 집에서는 한없이 다정다감하고 사랑을 표현하는
+                사람, 혼자는 라면만 먹지만 함께하는 식사는 진심을 다해서
+                차려주는 그런 사람입니다. 주변 사람들을 챙길 줄 알고 무슨 일이든
+                믿고 맡길 수 있는 사람이죠.
+              </p>
+              <br />
+              <p>
+                귀여운 모든 것들, 새로운 지식을 탐구하는 것, 게임하는 것, 맛있는
+                것을 먹고 요리하는 것, 집에서 뒹굴뒹굴하는 것, 고양이와 노는
+                것을 좋아해요. 제 눈에는 한없이 귀엽고 멋있는 사람이고, 주어진
+                것에 감사하고 앞으로 나아갈 길을 함께 찾아나갈 수 있는 배울 점이
+                많은 사람이기도 합니다. 오랜 시간 함께했지만, 앞으로 함께할
+                시간들이 더 기대가 됩니다 : )
+              </p>
+            </span>
+          </div>
+        </div>
+        <div class="line osic-line line-2 line-3"></div>
+        <div
+          id="osic-3"
+          class="inner-contents osic"
+          onclick="toggleDropdownOtherHide('osddb-3', 'dropdown-box'), setBGColorOnlyThis('osic-3', 'osic', '#F5F5F5')"
+        >
+          <div class="contents-question text">
+            <span>신부🐻‍❄️ 오수빈은 어떤 사람인가요?</span>
+            <img
+              id="osai-3"
+              class="icon"
+              src="/icons/btn_arrow_down.svg"
+              alt=""
+            />
+          </div>
+          <div id="osddb-3" class="dropdown-box">
+            <span class="contents-answer lh-26">
+              <p>"아무 일 없는 휴일, 마침 날씨도 좋을 때의 느낌 같은 사람"</p>
+              <p>
+                <br />
+              </p>
+
+              <p>
+                휴일 싫어하는 사람 거의 없잖아요? 마찬가지로 주변에 적이
+                없습니다. 진짜 주변 사람 모두 수빈이를 좋아해요. 유유상종이라고
+                주변에도 좋은 사람들만 모입니다.
+              </p>
+              <p></p>
+              <p>
+                귀여운 모든 것들, 해피엔딩으로 끝나는 영화, 소소한 것들, 새로운
+                곳을 가보는 것, 맛있는 것을 먹는 것, 스르르 잠드는 것을
+                좋아해요. 노래는 꽂히는 노래 몇 개만 계속 들어요.
+              </p>
+              <p>
+                <br />
+              </p>
+
+              <p>
+                표현할 수 있는 말이 또 뭐가 있을까요.. 예쁘고 착한 건 너무
+                당연하고... 감사할 줄 아는 사람이기도 하고.... 제가 아는
+                단어들로는 피상적인 표현 밖에 할 수 없는 게 아쉽네요. 앞으로
+                같이 시간을 보내며 표현할 수 있는 말들을 더 찾아보도록
+                하겠습니다.
+              </p>
+            </span>
+          </div>
+        </div>
+        <div class="line osic-line line-3 line-4"></div>
+        <div
+          id="osic-4"
+          class="inner-contents osic"
+          onclick="toggleDropdownOtherHide('osddb-4', 'dropdown-box'), setBGColorOnlyThis('osic-4', 'osic', '#F5F5F5')"
+        >
+          <div class="contents-question text">
+            <span>신혼여행은 어디로 가나요?</span>
+            <img
+              id="osai-4"
+              class="icon"
+              src="/icons/btn_arrow_down.svg"
+              alt=""
+            />
+          </div>
+          <div id="osddb-4" class="dropdown-box">
+            <span class="contents-answer lh-26">
+              <p>
+                유럽으로 2주 정도 갑니다! 따뜻한 4월 말에 이탈리아로 들어가서
+                스위스로 나와요.
+              </p>
+              <br />
+              <p>요리를 좋아하는 신랑이 이탈리아를 골랐고</p>
+              <p>자연 풍경을 좋아하는 신부가 스위스를 골랐어요.</p>
+              <br />
+              <p>
+                신부는 스위스에 가보는 게 버킷리스트였을 정도로 엄청 기대
+                중이에요. 여행을 별로 좋아하지 않는 신랑도 이탈리아 식재료를
+                경험할 생각에 사실 조금 많이 기대 중이랍니다.
+              </p>
+              <br />
+              <p>
+                저희 둘 다 여행은 휴양보다 경험이라고 생각해서 호화로운 여행이
+                아닌 가성비 있는 배낭여행으로 계획 중이랍니다. 오랜만에 가는
+                여행이니 언젠가 추억으로 남을 기억을 잔뜩 만들고 돌아오겠습니다.
+              </p>
+            </span>
+          </div>
+        </div>
+        <div class="line osic-line line-4 line-5"></div>
+        <div
+          id="osic-5"
+          class="inner-contents osic"
+          onclick="toggleDropdownOtherHide('osddb-5', 'dropdown-box'), setBGColorOnlyThis('osic-5', 'osic', '#F5F5F5')"
+        >
+          <div class="contents-question text">
+            <span>축하해주시는 분들께 전하고 싶은 한마디</span>
+            <img
+              id="osai-5"
+              class="icon"
+              src="/icons/btn_arrow_down.svg"
+              alt=""
+            />
+          </div>
+          <div id="osddb-5" class="dropdown-box">
+            <span class="contents-answer lh-26">
+              <p>네, 저희 드디어 합니다. 결혼.</p>
+              <br />
+              <p>
+                지성: 아마 저희 결혼식에 와주시는 분들 대부분 도대체 언제 결혼할
+                거냐라고 한 번쯤은 신랑신부에게 질문하셨을 거예요ㅋㅋ 여러분들의
+                응원 덕분에 정확히 사귄 지 11년이 되는 날 시집 장가를 가게
+                됐습니다. 저희가 결혼은 처음이라.. 좀 서투를 수도 있지만 늘
+                그랬듯 잘 이겨내며 살아보겠습니다. 축하해 주셔서 너무
+                감사드립니다.
+              </p>
+              <br />
+              <p>
+                수빈: 매번 내년에, 내후년에 할 거라던 그 결혼 드디어 하게
+                되었습니다! 좋은 날도 힘든 날도 으쌰 으쌰 함께 잘 이겨낸
+                저희이지만, 결혼이라는 이벤트 앞에서는 서툰 모습을 보일 수도
+                있을 것 같아요. 그렇지만 앞서 지성이의 말처럼 언제나 늘 그랬듯
+                앞으로도 잘 헤쳐나가면서 행복하게 잘 살겠습니다. 긴 시간 저희를
+                응원해 주시고 함께해 주신 모든 분들께 진심으로 감사드립니다.
+              </p>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div id="scroll-point-gallary" class="margin-0-30"></div>
+      <div id="gallary-area" class="contents margin-0-30">
+        <div class="subject">갤러리</div>
+        <div class="gallary">
+          <div class="images">
+            <div class="image-stack">
+              <img
+                src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_0.jpg"
+                class="gallary-img img"
+                onclick="openGallary(0)"
+              />
+              <img
+                src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_1.jpg"
+                class="gallary-img img"
+                onclick="openGallary(1)"
+              />
+              <img
+                src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_2.jpg"
+                class="gallary-img img"
+                onclick="openGallary(2)"
+              />
+            </div>
+            <div class="image-stack">
+              <img
+                src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_3.jpg"
+                class="gallary-img img"
+                onclick="openGallary(3)"
+              />
+              <img
+                src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_4.jpg"
+                class="gallary-img img"
+                onclick="openGallary(4)"
+              />
+              <img
+                src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_5.jpg"
+                class="gallary-img img"
+                onclick="openGallary(5)"
+              />
+            </div>
+            <div class="image-stack">
+              <img
+                src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_6.jpg"
+                class="gallary-img img"
+                onclick="openGallary(6)"
+              />
+              <img
+                src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_7.jpg"
+                class="gallary-img img"
+                onclick="openGallary(7)"
+              />
+              <img
+                src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_8.jpg"
+                class="gallary-img img"
+                onclick="openGallary(8)"
+              />
+            </div>
+            <div class="image-stack">
+              <img
+                src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_9.jpg"
+                class="gallary-img img"
+                onclick="openGallary(9)"
+              />
+              <img
+                src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_10.jpg"
+                class="gallary-img img"
+                onclick="openGallary(10)"
+              />
+              <img
+                src="https://wedding-invitaion.s3.ap-northeast-2.amazonaws.com/image/gallary/gallary_11.jpg"
+                class="gallary-img img"
+                onclick="openGallary(11)"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="scroll-point-date" class="margin-0-30"></div>
+      <div id="date-area" class="contents margin-0-30">
+        <div class="inner-contents">
+          <p>2024년 1월 27일 토요일</p>
+          <p>낮 12시 30분</p>
+        </div>
+        <div id="calendar-area">
+          <div id="calendar">
+            <div class="week">
+              <div class="day">일</div>
+              <div class="day">월</div>
+              <div class="day">화</div>
+              <div class="day">수</div>
+              <div class="day">목</div>
+              <div class="day">금</div>
+              <div class="day">토</div>
+            </div>
+            <div class="week">
+              <div class="day"></div>
+              <div class="day">1</div>
+              <div class="day">2</div>
+              <div class="day">3</div>
+              <div class="day">4</div>
+              <div class="day">5</div>
+              <div class="day">6</div>
+            </div>
+            <div class="week">
+              <div class="day">7</div>
+              <div class="day">8</div>
+              <div class="day">9</div>
+              <div class="day">10</div>
+              <div class="day">11</div>
+              <div class="day">12</div>
+              <div class="day">13</div>
+            </div>
+            <div class="week">
+              <div class="day">14</div>
+              <div class="day">15</div>
+              <div class="day">16</div>
+              <div class="day">17</div>
+              <div class="day">18</div>
+              <div class="day">19</div>
+              <div class="day">20</div>
+            </div>
+            <div class="week">
+              <div class="day">21</div>
+              <div class="day">22</div>
+              <div class="day">23</div>
+              <div class="day">24</div>
+              <div class="day">25</div>
+              <div class="day">26</div>
+              <div class="day highlight">27</div>
+            </div>
+            <div class="week">
+              <div class="day">28</div>
+              <div class="day">29</div>
+              <div class="day">30</div>
+              <div class="day">31</div>
+              <div class="day"></div>
+              <div class="day"></div>
+              <div class="day"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="location-area" class="contents margin-0-30">
+        <div class="subject">오시는 길</div>
+        <div id="map-area">
+          <div id="location-text" class="inner-contents">
+            <div id="location">
+              <span id="location-name">아펠가모 공덕점 라로브홀</span>
+              <span
+                id="copy-location"
+                class="button text"
+                onclick="copyToClipboard('location-text')"
+                >위치복사</span
+              >
+            </div>
+            <div id="address">
+              <p>서울특별시 마포구 마포대로 92 효성 해링턴스퀘어 B동 7층</p>
+              <p>지번 : 서울특별시 마포구 도화동 25-13</p>
+            </div>
+          </div>
+          <div id="map" class="inner-contents">
+            <img src="/images/map.png" />
+          </div>
+          <div id="app_link" class="inner-contents">
+            <div
+              class="map-button button"
+              onclick="openLink('https://naver.me/G6Dy5yIN')"
+            >
+              네이버 지도
+            </div>
+            <div
+              class="map-button button"
+              onclick="openLink('https://kko.to/eSva9XPWrY')"
+            >
+              카카오 맵
+            </div>
+          </div>
+        </div>
+        <div id="traffic-area">
+          <div class="inner-contents">
+            <div class="inner-subject">지하철</div>
+            <div class="inner-text">
+              <p>[경의중앙선, 공항철도, 5호선, 6호선]</p>
+              <p>
+                공덕역 10번 출구 방향으로 나와 유턴 후, 전방 50미터 우측 '효성
+                해링턴스퀘어 B동'
+              </p>
+            </div>
+          </div>
+          <div class="inner-contents">
+            <div class="inner-subject">버스</div>
+            <div class="inner-text">
+              160, 260, 660, 7013A, 7013B, 7611, 마포3, 마포10, 1002
+            </div>
+          </div>
+          <div class="inner-contents">
+            <div class="inner-subject">주차 안내</div>
+            <div class="inner-text">
+              <p>내비게이션 '공덕역 10번 출구' 검색 시 주차장 입구,</p>
+              <p>도착 후 주차 안내 받으세요.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="account-area" class="contents margin-0-30">
+        <div class="subject">마음 전하실 곳</div>
+        <div id="account">
+          <div
+            class="dropdown"
+            onclick="toggleDropdown('groom-account'), toggleArrowIcon('groom-account-arrow')"
+          >
+            <div class="account-group">신랑측 계좌번호</div>
+            <img
+              id="groom-account-arrow"
+              class="icon"
+              src="/icons/btn_arrow_down.svg"
+            />
+          </div>
+          <div id="groom-account" class="dropdown-box">
+            <div class="account-info">
+              <span class="account-owner text">정금여</span>
+              <span class="account-number text" id="accountNumber1"
+                >국민 675601-01-056788</span
+              >
+              <span
+                class="copy-button button text"
+                onclick="copyToClipboard('accountNumber1')"
+                >복사</span
+              >
+            </div>
+            <div class="account-info">
+              <span class="account-owner text">김지성</span>
+              <span class="account-number text" id="accountNumber2"
+                >토스뱅크 1000-0871-1379</span
+              >
+              <span
+                class="copy-button button text"
+                onclick="copyToClipboard('accountNumber2')"
+                >복사</span
+              >
+            </div>
+          </div>
+          <div
+            class="dropdown"
+            onclick="toggleDropdown('bride-account'), toggleArrowIcon('bride-account-arrow')"
+            style="margin-top: 6px"
+          >
+            <div class="account-group">신부측 계좌번호</div>
+            <img
+              id="bride-account-arrow"
+              class="icon"
+              src="/icons/btn_arrow_down.svg"
+            />
+          </div>
+          <div id="bride-account" class="dropdown-box">
+            <div class="account-info">
+              <span class="account-owner text">오덕흠</span>
+              <span class="account-number text" id="accountNumber3"
+                >국민 645-21-0025-017</span
+              >
+              <span
+                class="copy-button button text"
+                onclick="copyToClipboard('accountNumber3')"
+                >복사</span
+              >
+            </div>
+            <div class="account-info">
+              <span class="account-owner text">김주하</span>
+              <span class="account-number text" id="accountNumber4"
+                >카카오 3333-03-7545257</span
+              >
+              <span
+                class="copy-button button text"
+                onclick="copyToClipboard('accountNumber4')"
+                >복사</span
+              >
+            </div>
+            <div class="account-info">
+              <span class="account-owner text">오수빈</span>
+              <span class="account-number text" id="accountNumber5"
+                >우리 1002-556-207089</span
+              >
+              <span
+                class="copy-button button text"
+                onclick="copyToClipboard('accountNumber5')"
+                >복사</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="kakaotalk-sharing-btn"
+        class="button sharing-btn text"
+        href="javascript:;"
+      >
+        카카오톡 공유하기
+      </div>
+      <div
+        id="link-sharing-button"
+        class="button sharing-btn text"
+        style="margin-top: 6px"
+        onclick="copyToClipboard('invitaiton-link')"
+      >
+        링크주소 복사하기
+      </div>
+    </div>
+  </body>
+  <footer>
+    <div id="footer-area">
+      <img src="/images/footer_img.jpg" />
+      <p id="copyright">
+        &copy; 2023-2099 subin & jiseong. All rights reserved.
+      </p>
+    </div>
+  </footer>
+  <script>
+    Kakao.Share.createCustomButton({
+      container: "#kakaotalk-sharing-btn",
+      templateId: 100591,
+      templateArgs: {},
+    });
+  </script>
+  <script>
+    function handleScroll() {
+      var startElement = document.getElementById("fixed-start");
+      var tabElement = document.getElementById("tab");
+      var startRect = startElement.getBoundingClientRect();
+
+      if (startRect.top <= 0) {
+        startElement.classList.add("tab-size-box");
+        tabElement.classList.add("fixed");
+      } else {
+        startElement.classList.remove("tab-size-box");
+        tabElement.classList.remove("fixed");
+      }
+    }
+
     handleScroll();
 
-    // 스크롤 이벤트에 함수 연결
-    window.addEventListener('scroll', handleScroll);
-</script>
+    window.addEventListener("scroll", handleScroll);
+  </script>
 </html>
