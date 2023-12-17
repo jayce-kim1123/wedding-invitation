@@ -249,16 +249,32 @@
       document.getElementById("calendar").style.gap = calendarGap + "px";
     }
 
+    function hideElementOnSmallViewport(targetId) {
+      var viewportWidth = Math.max(
+        document.documentElement.clientWidth || 0,
+        window.innerWidth || 0
+      );
+      var targetElement = document.getElementById(targetId);
+
+      if (viewportWidth < 280 && targetElement) {
+        targetElement.classList.add("hide");
+      } else {
+        targetElement.classList.remove("hide");
+      }
+    }
+
     window.addEventListener("orientationchange", function () {
       setImagesquare("gallary-img");
       adjustCalender();
     });
 
     window.addEventListener("resize", function () {
+      hideElementOnSmallViewport("tab");
       adjustCalender();
     });
 
     window.addEventListener("load", function () {
+      hideElementOnSmallViewport("tab");
       setImagesquare("gallary-img");
       adjustCalender();
     });
