@@ -42,11 +42,22 @@
     }
 
     function toggleDropdownOtherHide(targetId, className) {
-        var targetElement = document.getElementById(targetId);
-        var targetElements = document.querySelectorAll('.' + className);
+      const match = targetId.match(/\d+$/);
+      var targetNum = match ? parseInt(match[0], 10) : null;
+      var targetLineClassName = "line-" + targetNum
+      var targetLine = document.querySelectorAll('.' + targetLineClassName);
+      var Line = document.querySelectorAll('.osic-line');
+      var targetElement = document.getElementById(targetId);
+      var targetElements = document.querySelectorAll('.' + className);
     
         targetElements.forEach(function(element) {
-            element.classList.remove('show'); // 또는 'inline', 'flex' 등
+            element.classList.remove('show');
+        });
+        Line.forEach(function(element) {
+            element.classList.remove('hide');
+        });
+        targetLine.forEach(function(element) {
+            element.classList.add('hide');
         });
         targetElement.classList.add('show');
     }
@@ -277,7 +288,7 @@
                   </span>
               </div>
             </div>
-            <div class="line"></div>
+            <div class="line osic-line line-1 line-2 hide"></div>
             <div id="osic-2" class="inner-contents osic" onclick="toggleDropdownOtherHide('osddb-2', 'dropdown-box'), setBGColorOnlyThis('osic-2', 'osic', '#F5F5F5')">
               <div class="contents-question text">
                   <span>신랑🐶 김지성은 어떤 사람인가요?</span>
@@ -293,7 +304,7 @@
                   </span>
               </div>
             </div>
-            <div class="line"></div>
+            <div class="line osic-line line-2 line-3"></div>
             <div id="osic-3" class="inner-contents osic" onclick="toggleDropdownOtherHide('osddb-3', 'dropdown-box'), setBGColorOnlyThis('osic-3', 'osic', '#F5F5F5')">
               <div class="contents-question text">
                   <span>신부🐻‍❄️ 오수빈은 어떤 사람인가요?</span>
@@ -310,7 +321,7 @@
                   </span>
               </div>
             </div>
-            <div class="line"></div>
+            <div class="line osic-line line-3 line-4"></div>
             <div id="osic-4" class="inner-contents osic" onclick="toggleDropdownOtherHide('osddb-4', 'dropdown-box'), setBGColorOnlyThis('osic-4', 'osic', '#F5F5F5')">
               <div class="contents-question text">
                   <span>신혼여행은 어디로 가나요?</span>
@@ -324,7 +335,7 @@
                   </span>
               </div>
             </div>
-            <div class="line"></div>
+            <div class="line osic-line  line-4 line-5"></div>
             <div id="osic-5" class="inner-contents osic" onclick="toggleDropdownOtherHide('osddb-5', 'dropdown-box'), setBGColorOnlyThis('osic-5', 'osic', '#F5F5F5')">
               <div class="contents-question text">
                   <span>축하해주시는 분들께 전하고 싶은 한마디</span>
