@@ -270,7 +270,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 700;
 }
 
@@ -291,8 +291,8 @@ body {
 }
 
 #our-story-area .contents-answer {
-    font-size: 15px;
-    line-height: 26px;
+    font-size: 16px;
+    line-height: 28px;
 }
 
 #gallary-area {
@@ -545,7 +545,7 @@ body {
     display: flex;
     flex-direction: column;
     align-self: stretch;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
 }
 
 #account {
