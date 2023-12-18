@@ -120,6 +120,7 @@ body {
 
 #tab.fixed {
     max-width: 440px;
+    min-width: 360px;
     background: white;
 }
 
@@ -293,6 +294,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+    align-self: stretch;
 }
 
 #gallary-area .images {
