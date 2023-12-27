@@ -125,25 +125,24 @@
       targetElement.classList.toggle("show");
     }
 
-    function toggleDropdownOtherHide(targetId, className) {
+    // function toggleDropdownOtherHide(targetId, className) {
+    //   var targetElement = document.getElementById(targetId);
+    //   var targetElements = document.querySelectorAll("." + className);
+
+    //   targetElements.forEach(function (element) {
+    //     element.classList.remove("show");
+    //   });
+    //   targetElement.classList.add("show");
+    // }
+
+    function toggleLine(targetId) {
       const match = targetId.match(/\d+$/);
       var targetNum = match ? parseInt(match[0], 10) : null;
-      var targetLineClassName = "line-" + targetNum;
-      var targetLine = document.querySelectorAll("." + targetLineClassName);
-      var Line = document.querySelectorAll(".osic-line");
-      var targetElement = document.getElementById(targetId);
-      var targetElements = document.querySelectorAll("." + className);
+      var targetLine = document.querySelectorAll(`.line-${targetNum}`);
 
-      targetElements.forEach(function (element) {
-        element.classList.remove("show");
-      });
-      Line.forEach(function (element) {
-        element.classList.remove("hide");
-      });
       targetLine.forEach(function (element) {
-        element.classList.add("hide");
+        element.classList.toggle("hide");
       });
-      targetElement.classList.add("show");
     }
 
     function toggleArrowIcon(targetId) {
@@ -157,8 +156,8 @@
     }
 
     function connectArrowAndDropdownBox(arrowId, dropdownId) {
-      var dropdownElement = document.getElementById(dropdownId);
       var arrowElement = document.getElementById(arrowId);
+      var dropdownElement = document.getElementById(dropdownId);
 
       if (dropdownElement.classList.contains("show")) {
         arrowElement.src = "/icons/btn_arrow_up.svg";
@@ -167,21 +166,46 @@
       }
     }
 
+    function connectArrowAndLineBase(arrowId, lineBaseClassName) {
+      var arrowElement = document.getElementById(arrowId);
+      var lineBaseElements = document.querySelectorAll(`.${lineBaseClassName}`);
+
+      lineBaseElements.forEach(function (element) {
+        if (arrowElement.src.split("/")[4] === "btn_arrow_up.svg") {
+          element.classList.add("bg-F5F5F5");
+          element.classList.remove("bg-FFFFFF");
+        } else {
+          element.classList.add("bg-FFFFFF");
+          element.classList.remove("bg-F5F5F5");
+        }
+      });
+    }
+
     window.addEventListener("click", function () {
       connectArrowAndDropdownBox("osai-1", "osddb-1");
       connectArrowAndDropdownBox("osai-2", "osddb-2");
       connectArrowAndDropdownBox("osai-3", "osddb-3");
       connectArrowAndDropdownBox("osai-4", "osddb-4");
       connectArrowAndDropdownBox("osai-5", "osddb-5");
+      connectArrowAndLineBase("osai-1", "line-base-1");
+      connectArrowAndLineBase("osai-2", "line-base-2");
+      connectArrowAndLineBase("osai-3", "line-base-3");
+      connectArrowAndLineBase("osai-4", "line-base-4");
+      connectArrowAndLineBase("osai-5", "line-base-5");
     });
 
-    function setBGColorOnlyThis(targetId, className, color) {
+    // function setBGColorOnlyThis(targetId, className, color) {
+    //   var targetElement = document.getElementById(targetId);
+    //   var targetElements = document.querySelectorAll("." + className);
+    //   targetElements.forEach(function (element) {
+    //     element.style.background = null;
+    //   });
+    //   targetElement.style.backgroundColor = color;
+    // }
+
+    function toggleBGColor(targetId, color) {
       var targetElement = document.getElementById(targetId);
-      var targetElements = document.querySelectorAll("." + className);
-      targetElements.forEach(function (element) {
-        element.style.background = null;
-      });
-      targetElement.style.backgroundColor = color;
+      targetElement.classList.toggle(`bg-${color}`);
     }
 
     function openLink(linkUrl) {
@@ -394,13 +418,12 @@
         <div class="subject" style="margin-left: 30px">우리의 이야기</div>
         <div
           id="osic-1"
-          class="inner-contents osic"
-          style="background-color: #f5f5f5"
-          onclick="toggleDropdownOtherHide('osddb-1', 'dropdown-box'), setBGColorOnlyThis('osic-1', 'osic', '#F5F5F5')"
+          class="inner-contents osic bg-F5F5F5"
+          onclick="toggleDropdown('osddb-1'), toggleLine('osddb-1'), toggleBGColor('osic-1', 'F5F5F5')"
         >
           <div class="contents-question text">
             <span>둘은 어떻게 만났나요?</span>
-            <img id="osai-1" class="icon" src="/icons/btn_arrow_down.svg" alt="" />
+            <img id="osai-1" class="icon" src="/icons/btn_arrow_up.svg" alt="" />
           </div>
           <div id="osddb-1" class="dropdown-box show">
             <span class="contents-answer">
@@ -418,11 +441,13 @@
             </span>
           </div>
         </div>
-        <div class="line osic-line line-1 line-2 hide"></div>
+        <div class="line-base-1 line-base-2">
+          <div class="line osic-line line-1 line-2 hide"></div>
+        </div>
         <div
           id="osic-2"
           class="inner-contents osic"
-          onclick="toggleDropdownOtherHide('osddb-2', 'dropdown-box'), setBGColorOnlyThis('osic-2', 'osic', '#F5F5F5')"
+          onclick="toggleDropdown('osddb-2'), toggleLine('osddb-2'), toggleBGColor('osic-2', 'F5F5F5')"
         >
           <div class="contents-question text">
             <span>신랑🐶 김지성은 어떤 사람인가요?</span>
@@ -451,11 +476,13 @@
             </span>
           </div>
         </div>
-        <div class="line osic-line line-2 line-3"></div>
+        <div class="line-base-2 line-base-3">
+          <div class="line osic-line line-2 line-3"></div>
+        </div>
         <div
           id="osic-3"
           class="inner-contents osic"
-          onclick="toggleDropdownOtherHide('osddb-3', 'dropdown-box'), setBGColorOnlyThis('osic-3', 'osic', '#F5F5F5')"
+          onclick="toggleDropdown('osddb-3'), toggleLine('osddb-3'), toggleBGColor('osic-3', 'F5F5F5')"
         >
           <div class="contents-question text">
             <span>신부🐻‍❄️ 오수빈은 어떤 사람인가요?</span>
@@ -492,11 +519,13 @@
             </span>
           </div>
         </div>
-        <div class="line osic-line line-3 line-4"></div>
+        <div class="line-base-3 line-base-4">
+          <div class="line osic-line line-3 line-4"></div>
+        </div>
         <div
           id="osic-4"
           class="inner-contents osic"
-          onclick="toggleDropdownOtherHide('osddb-4', 'dropdown-box'), setBGColorOnlyThis('osic-4', 'osic', '#F5F5F5')"
+          onclick="toggleDropdown('osddb-4'), toggleLine('osddb-4'), toggleBGColor('osic-4', 'F5F5F5')"
         >
           <div class="contents-question text">
             <span>신혼여행은 어디로 가나요?</span>
@@ -526,11 +555,13 @@
             </span>
           </div>
         </div>
-        <div class="line osic-line line-4 line-5"></div>
+        <div class="line-base-4 line-base-5">
+          <div class="line osic-line line-4 line-5"></div>
+        </div>
         <div
           id="osic-5"
           class="inner-contents osic"
-          onclick="toggleDropdownOtherHide('osddb-5', 'dropdown-box'), setBGColorOnlyThis('osic-5', 'osic', '#F5F5F5')"
+          onclick="toggleDropdown('osddb-5'), toggleLine('osddb-5'), toggleBGColor('osic-5', 'F5F5F5')"
         >
           <div class="contents-question text">
             <span>축하해주시는 분들께 전하고 싶은 한마디</span>
