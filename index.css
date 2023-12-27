@@ -39,6 +39,14 @@ body {
     color: #111;
 }
 
+.bg-FFFFFF {
+    background: #FFFFFF;
+}
+
+.bg-F5F5F5 {
+    background: #F5F5F5;
+}
+
 .button {
     cursor: pointer;
 }
